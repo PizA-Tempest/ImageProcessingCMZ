@@ -1,0 +1,11 @@
+﻿row_id,image_path,source_video,camera,timestamp_seconds,top_class,top_conf,is_animal_class,num_detections,prev_path,next_path
+0,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003220000ms.jpg,CAM1_Dataset1.mp4,CAM1,3220.0,bird,0.592,True,2,,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003300000ms.jpg
+1,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003300000ms.jpg,CAM1_Dataset1.mp4,CAM1,3300.0,bird,0.63,True,4,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003220000ms.jpg,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003500000ms.jpg
+2,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003500000ms.jpg,CAM1_Dataset1.mp4,CAM1,3500.0,bird,0.571,True,1,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003300000ms.jpg,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003810000ms.jpg
+3,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003810000ms.jpg,CAM1_Dataset1.mp4,CAM1,3810.0,bird,0.78,True,1,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003500000ms.jpg,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004160000ms.jpg
+4,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004160000ms.jpg,CAM1_Dataset1.mp4,CAM1,4160.0,bird,0.815,True,2,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003810000ms.jpg,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004190000ms.jpg
+5,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004190000ms.jpg,CAM1_Dataset1.mp4,CAM1,4190.0,bird,0.384,True,3,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004160000ms.jpg,
+6,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002170000ms.jpg,CAM1_Dataset2.mp4,CAM1,2170.0,bird,0.273,True,3,,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004760000ms.jpg
+7,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004760000ms.jpg,CAM1_Dataset2.mp4,CAM1,4760.0,cat,0.104,True,1,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002170000ms.jpg,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005020000ms.jpg
+8,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005020000ms.jpg,CAM1_Dataset2.mp4,CAM1,5020.0,dog,0.308,True,2,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004760000ms.jpg,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005090000ms.jpg
+9,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005090000ms.jpg,CAM1_Dataset2.mp4,CAM1,5090.0,dog,0.272,True,4,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005020000ms.jpg,

@@ -1,0 +1,712 @@
+﻿image_path,source_video,camera,timestamp_seconds,top_class,top_conf,is_animal_class,num_detections,row_id,label
+data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003220000ms.jpg,CAM1_Dataset1.mp4,CAM1,3220.0,bird,0.592,True,2,0,Walking
+data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003300000ms.jpg,CAM1_Dataset1.mp4,CAM1,3300.0,bird,0.63,True,4,1,Walking
+data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003500000ms.jpg,CAM1_Dataset1.mp4,CAM1,3500.0,bird,0.571,True,1,2,Walking
+data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003810000ms.jpg,CAM1_Dataset1.mp4,CAM1,3810.0,bird,0.78,True,1,3,Walking
+data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004160000ms.jpg,CAM1_Dataset1.mp4,CAM1,4160.0,bird,0.815,True,2,4,Walking
+data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004190000ms.jpg,CAM1_Dataset1.mp4,CAM1,4190.0,bird,0.384,True,3,5,Walking
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002170000ms.jpg,CAM1_Dataset2.mp4,CAM1,2170.0,bird,0.273,True,3,6,Standing
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004760000ms.jpg,CAM1_Dataset2.mp4,CAM1,4760.0,cat,0.104,True,1,7,Eating
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005020000ms.jpg,CAM1_Dataset2.mp4,CAM1,5020.0,dog,0.308,True,2,8,Walking
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005090000ms.jpg,CAM1_Dataset2.mp4,CAM1,5090.0,dog,0.272,True,4,9,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0000110000ms.jpg,CAM1_Dataset3.mp4,CAM1,110.0,bird,0.792,True,3,10,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0000210000ms.jpg,CAM1_Dataset3.mp4,CAM1,210.0,bird,0.497,True,2,11,Grooming
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0000310000ms.jpg,CAM1_Dataset3.mp4,CAM1,310.0,bird,0.601,True,4,12,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0001390000ms.jpg,CAM1_Dataset3.mp4,CAM1,1390.0,bird,0.372,True,2,13,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0001770000ms.jpg,CAM1_Dataset3.mp4,CAM1,1770.0,bird,0.881,True,2,14,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0001930000ms.jpg,CAM1_Dataset3.mp4,CAM1,1930.0,bird,0.526,True,3,15,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0002910000ms.jpg,CAM1_Dataset3.mp4,CAM1,2910.0,bird,0.85,True,1,16,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0003000000ms.jpg,CAM1_Dataset3.mp4,CAM1,3000.0,bird,0.806,True,2,17,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0003410000ms.jpg,CAM1_Dataset3.mp4,CAM1,3410.0,bird,0.83,True,2,18,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0003440000ms.jpg,CAM1_Dataset3.mp4,CAM1,3440.0,bird,0.726,True,3,19,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0004420000ms.jpg,CAM1_Dataset3.mp4,CAM1,4420.0,bird,0.858,True,1,20,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0004480000ms.jpg,CAM1_Dataset3.mp4,CAM1,4480.0,bird,0.185,True,2,21,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0004730000ms.jpg,CAM1_Dataset3.mp4,CAM1,4730.0,bird,0.556,True,1,22,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0004920000ms.jpg,CAM1_Dataset3.mp4,CAM1,4920.0,bird,0.378,True,5,23,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0005260000ms.jpg,CAM1_Dataset3.mp4,CAM1,5260.0,bird,0.551,True,2,24,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0005290000ms.jpg,CAM1_Dataset3.mp4,CAM1,5290.0,bird,0.312,True,2,25,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0005410000ms.jpg,CAM1_Dataset3.mp4,CAM1,5410.0,bird,0.262,True,3,26,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0005550000ms.jpg,CAM1_Dataset3.mp4,CAM1,5550.0,bird,0.521,True,4,27,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0005970000ms.jpg,CAM1_Dataset3.mp4,CAM1,5970.0,bird,0.723,True,2,28,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0006420000ms.jpg,CAM1_Dataset3.mp4,CAM1,6420.0,bird,0.357,True,2,29,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0006640000ms.jpg,CAM1_Dataset3.mp4,CAM1,6640.0,bird,0.382,True,1,30,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0006940000ms.jpg,CAM1_Dataset3.mp4,CAM1,6940.0,bird,0.755,True,1,31,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0008720000ms.jpg,CAM1_Dataset3.mp4,CAM1,8720.0,bird,0.678,True,2,32,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0008750000ms.jpg,CAM1_Dataset3.mp4,CAM1,8750.0,bird,0.818,True,2,33,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0008890000ms.jpg,CAM1_Dataset3.mp4,CAM1,8890.0,bird,0.628,True,3,34,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0009180000ms.jpg,CAM1_Dataset3.mp4,CAM1,9180.0,bird,0.116,True,3,35,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0009300000ms.jpg,CAM1_Dataset3.mp4,CAM1,9300.0,bird,0.847,True,2,36,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0009520000ms.jpg,CAM1_Dataset3.mp4,CAM1,9520.0,bird,0.88,True,2,37,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0009550000ms.jpg,CAM1_Dataset3.mp4,CAM1,9550.0,bird,0.83,True,2,38,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0009630000ms.jpg,CAM1_Dataset3.mp4,CAM1,9630.0,dog,0.278,True,4,39,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0010770000ms.jpg,CAM1_Dataset3.mp4,CAM1,10770.0,bird,0.43,True,2,40,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0011160000ms.jpg,CAM1_Dataset3.mp4,CAM1,11160.0,bird,0.62,True,2,41,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0011530000ms.jpg,CAM1_Dataset3.mp4,CAM1,11530.0,bird,0.831,True,2,42,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0012350000ms.jpg,CAM1_Dataset3.mp4,CAM1,12350.0,bird,0.862,True,2,43,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0012510000ms.jpg,CAM1_Dataset3.mp4,CAM1,12510.0,bird,0.618,True,3,44,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0013070000ms.jpg,CAM1_Dataset3.mp4,CAM1,13070.0,bird,0.606,True,2,45,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0013180000ms.jpg,CAM1_Dataset3.mp4,CAM1,13180.0,bird,0.74,True,2,46,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0013420000ms.jpg,CAM1_Dataset3.mp4,CAM1,13420.0,dog,0.329,True,3,47,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0013540000ms.jpg,CAM1_Dataset3.mp4,CAM1,13540.0,bird,0.121,True,2,48,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0014180000ms.jpg,CAM1_Dataset3.mp4,CAM1,14180.0,bird,0.468,True,2,49,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0014540000ms.jpg,CAM1_Dataset3.mp4,CAM1,14540.0,dog,0.404,True,4,50,Standing
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0014990000ms.jpg,CAM1_Dataset3.mp4,CAM1,14990.0,bird,0.876,True,2,51,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0015540000ms.jpg,CAM1_Dataset3.mp4,CAM1,15540.0,bird,0.778,True,2,52,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0015760000ms.jpg,CAM1_Dataset3.mp4,CAM1,15760.0,bird,0.856,True,1,53,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0016000000ms.jpg,CAM1_Dataset3.mp4,CAM1,16000.0,bird,0.847,True,2,54,Walking
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0017340000ms.jpg,CAM1_Dataset3.mp4,CAM1,17340.0,bird,0.849,True,2,55,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0002500000ms.jpg,CAM2_Dataset1.mp4,CAM2,2500.0,bird,0.321,True,4,56,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0002530000ms.jpg,CAM2_Dataset1.mp4,CAM2,2530.0,bird,0.842,True,5,57,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0003540000ms.jpg,CAM2_Dataset1.mp4,CAM2,3540.0,bird,0.847,True,3,58,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0003770000ms.jpg,CAM2_Dataset1.mp4,CAM2,3770.0,bird,0.486,True,4,59,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0003800000ms.jpg,CAM2_Dataset1.mp4,CAM2,3800.0,bird,0.574,True,4,60,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0003830000ms.jpg,CAM2_Dataset1.mp4,CAM2,3830.0,bird,0.824,True,4,61,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0004740000ms.jpg,CAM2_Dataset1.mp4,CAM2,4740.0,bird,0.221,True,5,62,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0005060000ms.jpg,CAM2_Dataset1.mp4,CAM2,5060.0,bird,0.709,True,4,63,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0011410000ms.jpg,CAM2_Dataset1.mp4,CAM2,11410.0,bird,0.597,True,5,64,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0011570000ms.jpg,CAM2_Dataset1.mp4,CAM2,11570.0,bird,0.905,True,4,65,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0011730000ms.jpg,CAM2_Dataset1.mp4,CAM2,11730.0,bird,0.342,True,5,66,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0011770000ms.jpg,CAM2_Dataset1.mp4,CAM2,11770.0,bird,0.645,True,3,67,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0011900000ms.jpg,CAM2_Dataset1.mp4,CAM2,11900.0,bird,0.527,True,3,68,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0011990000ms.jpg,CAM2_Dataset1.mp4,CAM2,11990.0,bird,0.338,True,4,69,Standing
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012230000ms.jpg,CAM2_Dataset1.mp4,CAM2,12230.0,giraffe,0.751,True,3,70,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012310000ms.jpg,CAM2_Dataset1.mp4,CAM2,12310.0,cat,0.272,True,5,71,Grooming
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012690000ms.jpg,CAM2_Dataset1.mp4,CAM2,12690.0,bird,0.756,True,4,72,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013060000ms.jpg,CAM2_Dataset1.mp4,CAM2,13060.0,bird,0.817,True,4,73,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013200000ms.jpg,CAM2_Dataset1.mp4,CAM2,13200.0,bird,0.876,True,4,74,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013250000ms.jpg,CAM2_Dataset1.mp4,CAM2,13250.0,cat,0.292,True,5,75,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013340000ms.jpg,CAM2_Dataset1.mp4,CAM2,13340.0,bird,0.408,True,4,76,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013430000ms.jpg,CAM2_Dataset1.mp4,CAM2,13430.0,bird,0.635,True,3,77,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013670000ms.jpg,CAM2_Dataset1.mp4,CAM2,13670.0,bird,0.655,True,3,78,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013720000ms.jpg,CAM2_Dataset1.mp4,CAM2,13720.0,bird,0.428,True,4,79,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013750000ms.jpg,CAM2_Dataset1.mp4,CAM2,13750.0,bird,0.605,True,4,80,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013790000ms.jpg,CAM2_Dataset1.mp4,CAM2,13790.0,bird,0.75,True,4,81,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013930000ms.jpg,CAM2_Dataset1.mp4,CAM2,13930.0,bird,0.69,True,2,82,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0013960000ms.jpg,CAM2_Dataset1.mp4,CAM2,13960.0,bird,0.625,True,4,83,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0014050000ms.jpg,CAM2_Dataset1.mp4,CAM2,14050.0,bird,0.612,True,4,84,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0014160000ms.jpg,CAM2_Dataset1.mp4,CAM2,14160.0,bird,0.404,True,3,85,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0014200000ms.jpg,CAM2_Dataset1.mp4,CAM2,14200.0,bird,0.587,True,4,86,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0014490000ms.jpg,CAM2_Dataset1.mp4,CAM2,14490.0,bird,0.434,True,3,87,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0015000000ms.jpg,CAM2_Dataset1.mp4,CAM2,15000.0,bird,0.575,True,4,88,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0015040000ms.jpg,CAM2_Dataset1.mp4,CAM2,15040.0,bird,0.88,True,4,89,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0015430000ms.jpg,CAM2_Dataset1.mp4,CAM2,15430.0,bird,0.711,True,4,90,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0015680000ms.jpg,CAM2_Dataset1.mp4,CAM2,15680.0,bird,0.755,True,4,91,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0015900000ms.jpg,CAM2_Dataset1.mp4,CAM2,15900.0,bird,0.431,True,5,92,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0016020000ms.jpg,CAM2_Dataset1.mp4,CAM2,16020.0,bird,0.853,True,3,93,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0016060000ms.jpg,CAM2_Dataset1.mp4,CAM2,16060.0,bird,0.856,True,4,94,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0016390000ms.jpg,CAM2_Dataset1.mp4,CAM2,16390.0,bird,0.819,True,4,95,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0016880000ms.jpg,CAM2_Dataset1.mp4,CAM2,16880.0,bird,0.887,True,2,96,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0017060000ms.jpg,CAM2_Dataset1.mp4,CAM2,17060.0,horse,0.4,True,4,97,Walking
+data/scan_candidates/CAM2_Dataset2/CAM2_Dataset2_0000920000ms.jpg,CAM2_Dataset2.mp4,CAM2,920.0,bird,0.843,True,3,98,Walking
+data/scan_candidates/CAM2_Dataset2/CAM2_Dataset2_0007600000ms.jpg,CAM2_Dataset2.mp4,CAM2,7600.0,bird,0.563,True,2,99,Walking
+data/scan_candidates/CAM2_Dataset2/CAM2_Dataset2_0011910000ms.jpg,CAM2_Dataset2.mp4,CAM2,11910.0,cat,0.506,True,6,100,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0005930000ms.jpg,CAM2_Dataset3.mp4,CAM2,5930.0,giraffe,0.452,True,3,101,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0006780000ms.jpg,CAM2_Dataset3.mp4,CAM2,6780.0,bird,0.582,True,4,102,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0007020000ms.jpg,CAM2_Dataset3.mp4,CAM2,7020.0,bird,0.722,True,2,103,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0007220000ms.jpg,CAM2_Dataset3.mp4,CAM2,7220.0,giraffe,0.661,True,3,104,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0007600000ms.jpg,CAM2_Dataset3.mp4,CAM2,7600.0,bird,0.715,True,5,105,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0007680000ms.jpg,CAM2_Dataset3.mp4,CAM2,7680.0,bird,0.808,True,4,106,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0013030000ms.jpg,CAM2_Dataset3.mp4,CAM2,13030.0,bird,0.753,True,5,107,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0013120000ms.jpg,CAM2_Dataset3.mp4,CAM2,13120.0,bird,0.902,True,3,108,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0013540000ms.jpg,CAM2_Dataset3.mp4,CAM2,13540.0,bird,0.571,True,4,109,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0013610000ms.jpg,CAM2_Dataset3.mp4,CAM2,13610.0,bird,0.897,True,3,110,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0013650000ms.jpg,CAM2_Dataset3.mp4,CAM2,13650.0,bird,0.855,True,3,111,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0014430000ms.jpg,CAM2_Dataset3.mp4,CAM2,14430.0,bird,0.222,True,3,112,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0014500000ms.jpg,CAM2_Dataset3.mp4,CAM2,14500.0,bird,0.883,True,4,113,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0014790000ms.jpg,CAM2_Dataset3.mp4,CAM2,14790.0,bird,0.378,True,3,114,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0014990000ms.jpg,CAM2_Dataset3.mp4,CAM2,14990.0,bird,0.794,True,4,115,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0015180000ms.jpg,CAM2_Dataset3.mp4,CAM2,15180.0,bird,0.668,True,4,116,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0015440000ms.jpg,CAM2_Dataset3.mp4,CAM2,15440.0,bird,0.65,True,3,117,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0015710000ms.jpg,CAM2_Dataset3.mp4,CAM2,15710.0,bird,0.618,True,5,118,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0015830000ms.jpg,CAM2_Dataset3.mp4,CAM2,15830.0,cat,0.577,True,4,119,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0015960000ms.jpg,CAM2_Dataset3.mp4,CAM2,15960.0,bird,0.416,True,5,120,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0016020000ms.jpg,CAM2_Dataset3.mp4,CAM2,16020.0,bird,0.653,True,2,121,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0016320000ms.jpg,CAM2_Dataset3.mp4,CAM2,16320.0,bird,0.527,True,4,122,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0016360000ms.jpg,CAM2_Dataset3.mp4,CAM2,16360.0,bird,0.197,True,1,123,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0017290000ms.jpg,CAM2_Dataset3.mp4,CAM2,17290.0,bird,0.604,True,4,124,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0017440000ms.jpg,CAM2_Dataset3.mp4,CAM2,17440.0,bird,0.836,True,4,125,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0017750000ms.jpg,CAM2_Dataset3.mp4,CAM2,17750.0,bird,0.898,True,3,126,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0018040000ms.jpg,CAM2_Dataset3.mp4,CAM2,18040.0,bird,0.631,True,5,127,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0018070000ms.jpg,CAM2_Dataset3.mp4,CAM2,18070.0,bird,0.755,True,4,128,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0018120000ms.jpg,CAM2_Dataset3.mp4,CAM2,18120.0,bird,0.496,True,3,129,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0018330000ms.jpg,CAM2_Dataset3.mp4,CAM2,18330.0,bird,0.269,True,4,130,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0018380000ms.jpg,CAM2_Dataset3.mp4,CAM2,18380.0,bird,0.906,True,4,131,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0018600000ms.jpg,CAM2_Dataset3.mp4,CAM2,18600.0,bird,0.753,True,4,132,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0018820000ms.jpg,CAM2_Dataset3.mp4,CAM2,18820.0,bird,0.769,True,3,133,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0018920000ms.jpg,CAM2_Dataset3.mp4,CAM2,18920.0,bird,0.854,True,4,134,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0019280000ms.jpg,CAM2_Dataset3.mp4,CAM2,19280.0,bird,0.861,True,3,135,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0019670000ms.jpg,CAM2_Dataset3.mp4,CAM2,19670.0,bird,0.388,True,5,136,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0019990000ms.jpg,CAM2_Dataset3.mp4,CAM2,19990.0,bird,0.776,True,4,137,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0020120000ms.jpg,CAM2_Dataset3.mp4,CAM2,20120.0,bird,0.87,True,5,138,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0020330000ms.jpg,CAM2_Dataset3.mp4,CAM2,20330.0,bird,0.716,True,6,139,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0020520000ms.jpg,CAM2_Dataset3.mp4,CAM2,20520.0,bird,0.755,True,4,140,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0020560000ms.jpg,CAM2_Dataset3.mp4,CAM2,20560.0,bird,0.902,True,4,141,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0020660000ms.jpg,CAM2_Dataset3.mp4,CAM2,20660.0,bird,0.843,True,4,142,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0020780000ms.jpg,CAM2_Dataset3.mp4,CAM2,20780.0,bird,0.635,True,5,143,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0021320000ms.jpg,CAM2_Dataset3.mp4,CAM2,21320.0,bird,0.305,True,3,144,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0021410000ms.jpg,CAM2_Dataset3.mp4,CAM2,21410.0,bird,0.82,True,3,145,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0021780000ms.jpg,CAM2_Dataset3.mp4,CAM2,21780.0,bird,0.75,True,4,146,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0021840000ms.jpg,CAM2_Dataset3.mp4,CAM2,21840.0,bird,0.792,True,3,147,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0021870000ms.jpg,CAM2_Dataset3.mp4,CAM2,21870.0,bird,0.512,True,4,148,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0022080000ms.jpg,CAM2_Dataset3.mp4,CAM2,22080.0,bird,0.82,True,4,149,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0022110000ms.jpg,CAM2_Dataset3.mp4,CAM2,22110.0,bird,0.887,True,4,150,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0022190000ms.jpg,CAM2_Dataset3.mp4,CAM2,22190.0,bird,0.818,True,3,151,Walking
+data/scan_candidates/CAM2_Dataset3/CAM2_Dataset3_0022530000ms.jpg,CAM2_Dataset3.mp4,CAM2,22530.0,bird,0.319,True,4,152,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0002560000ms.jpg,CAM3_Dataset1.mp4,CAM3,2560.0,bird,0.751,True,4,153,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0002590000ms.jpg,CAM3_Dataset1.mp4,CAM3,2590.0,bird,0.792,True,3,154,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003080000ms.jpg,CAM3_Dataset1.mp4,CAM3,3080.0,bird,0.345,True,4,155,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003110000ms.jpg,CAM3_Dataset1.mp4,CAM3,3110.0,bird,0.343,True,3,156,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003210000ms.jpg,CAM3_Dataset1.mp4,CAM3,3210.0,bird,0.614,True,3,157,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003320000ms.jpg,CAM3_Dataset1.mp4,CAM3,3320.0,bird,0.526,True,4,158,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003400000ms.jpg,CAM3_Dataset1.mp4,CAM3,3400.0,bird,0.429,True,3,159,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003550000ms.jpg,CAM3_Dataset1.mp4,CAM3,3550.0,bird,0.856,True,3,160,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003830000ms.jpg,CAM3_Dataset1.mp4,CAM3,3830.0,bird,0.33,True,3,161,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004120000ms.jpg,CAM3_Dataset1.mp4,CAM3,4120.0,bird,0.624,True,2,162,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004240000ms.jpg,CAM3_Dataset1.mp4,CAM3,4240.0,bird,0.259,True,2,163,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004290000ms.jpg,CAM3_Dataset1.mp4,CAM3,4290.0,bird,0.658,True,2,164,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004470000ms.jpg,CAM3_Dataset1.mp4,CAM3,4470.0,bird,0.405,True,3,165,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004560000ms.jpg,CAM3_Dataset1.mp4,CAM3,4560.0,bird,0.543,True,2,166,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004590000ms.jpg,CAM3_Dataset1.mp4,CAM3,4590.0,bird,0.281,True,4,167,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004770000ms.jpg,CAM3_Dataset1.mp4,CAM3,4770.0,bird,0.677,True,3,168,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004810000ms.jpg,CAM3_Dataset1.mp4,CAM3,4810.0,bird,0.334,True,6,169,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004860000ms.jpg,CAM3_Dataset1.mp4,CAM3,4860.0,bird,0.443,True,2,170,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004970000ms.jpg,CAM3_Dataset1.mp4,CAM3,4970.0,bird,0.856,True,4,171,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005000000ms.jpg,CAM3_Dataset1.mp4,CAM3,5000.0,bird,0.318,True,3,172,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005110000ms.jpg,CAM3_Dataset1.mp4,CAM3,5110.0,bird,0.474,True,4,173,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005200000ms.jpg,CAM3_Dataset1.mp4,CAM3,5200.0,bird,0.657,True,3,174,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005330000ms.jpg,CAM3_Dataset1.mp4,CAM3,5330.0,bird,0.236,True,3,175,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005360000ms.jpg,CAM3_Dataset1.mp4,CAM3,5360.0,bird,0.793,True,4,176,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005390000ms.jpg,CAM3_Dataset1.mp4,CAM3,5390.0,bird,0.256,True,4,177,Grooming
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005420000ms.jpg,CAM3_Dataset1.mp4,CAM3,5420.0,bird,0.529,True,3,178,Grooming
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005500000ms.jpg,CAM3_Dataset1.mp4,CAM3,5500.0,bird,0.725,True,3,179,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005530000ms.jpg,CAM3_Dataset1.mp4,CAM3,5530.0,bird,0.484,True,3,180,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005660000ms.jpg,CAM3_Dataset1.mp4,CAM3,5660.0,bird,0.267,True,4,181,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005710000ms.jpg,CAM3_Dataset1.mp4,CAM3,5710.0,bird,0.275,True,3,182,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0009770000ms.jpg,CAM3_Dataset1.mp4,CAM3,9770.0,bird,0.398,True,3,183,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0009900000ms.jpg,CAM3_Dataset1.mp4,CAM3,9900.0,bird,0.4,True,4,184,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0010970000ms.jpg,CAM3_Dataset1.mp4,CAM3,10970.0,bird,0.414,True,3,185,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011030000ms.jpg,CAM3_Dataset1.mp4,CAM3,11030.0,bird,0.808,True,3,186,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011060000ms.jpg,CAM3_Dataset1.mp4,CAM3,11060.0,bird,0.337,True,3,187,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011170000ms.jpg,CAM3_Dataset1.mp4,CAM3,11170.0,bird,0.324,True,3,188,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011550000ms.jpg,CAM3_Dataset1.mp4,CAM3,11550.0,bird,0.252,True,3,189,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011680000ms.jpg,CAM3_Dataset1.mp4,CAM3,11680.0,bird,0.143,True,3,190,Other
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011740000ms.jpg,CAM3_Dataset1.mp4,CAM3,11740.0,bird,0.348,True,3,191,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011790000ms.jpg,CAM3_Dataset1.mp4,CAM3,11790.0,bird,0.402,True,2,192,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011870000ms.jpg,CAM3_Dataset1.mp4,CAM3,11870.0,bird,0.623,True,4,193,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011900000ms.jpg,CAM3_Dataset1.mp4,CAM3,11900.0,bird,0.539,True,2,194,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012150000ms.jpg,CAM3_Dataset1.mp4,CAM3,12150.0,bird,0.772,True,3,195,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012340000ms.jpg,CAM3_Dataset1.mp4,CAM3,12340.0,bird,0.4,True,3,196,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012620000ms.jpg,CAM3_Dataset1.mp4,CAM3,12620.0,bird,0.656,True,3,197,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012830000ms.jpg,CAM3_Dataset1.mp4,CAM3,12830.0,bird,0.33,True,3,198,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012900000ms.jpg,CAM3_Dataset1.mp4,CAM3,12900.0,bird,0.798,True,3,199,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013040000ms.jpg,CAM3_Dataset1.mp4,CAM3,13040.0,bird,0.564,True,2,200,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013070000ms.jpg,CAM3_Dataset1.mp4,CAM3,13070.0,bird,0.663,True,3,201,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013290000ms.jpg,CAM3_Dataset1.mp4,CAM3,13290.0,bird,0.372,True,5,202,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013320000ms.jpg,CAM3_Dataset1.mp4,CAM3,13320.0,bird,0.703,True,3,203,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013380000ms.jpg,CAM3_Dataset1.mp4,CAM3,13380.0,bird,0.339,True,3,204,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013480000ms.jpg,CAM3_Dataset1.mp4,CAM3,13480.0,bird,0.457,True,4,205,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013530000ms.jpg,CAM3_Dataset1.mp4,CAM3,13530.0,bird,0.564,True,4,206,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013690000ms.jpg,CAM3_Dataset1.mp4,CAM3,13690.0,bird,0.289,True,4,207,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013840000ms.jpg,CAM3_Dataset1.mp4,CAM3,13840.0,bird,0.342,True,3,208,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013910000ms.jpg,CAM3_Dataset1.mp4,CAM3,13910.0,bird,0.647,True,4,209,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013950000ms.jpg,CAM3_Dataset1.mp4,CAM3,13950.0,bird,0.399,True,4,210,Standing
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014270000ms.jpg,CAM3_Dataset1.mp4,CAM3,14270.0,bird,0.659,True,3,211,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014600000ms.jpg,CAM3_Dataset1.mp4,CAM3,14600.0,bird,0.295,True,3,212,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014680000ms.jpg,CAM3_Dataset1.mp4,CAM3,14680.0,bird,0.156,True,2,213,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014730000ms.jpg,CAM3_Dataset1.mp4,CAM3,14730.0,bird,0.667,True,2,214,Other
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014920000ms.jpg,CAM3_Dataset1.mp4,CAM3,14920.0,bird,0.409,True,4,215,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0015010000ms.jpg,CAM3_Dataset1.mp4,CAM3,15010.0,bird,0.376,True,3,216,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0015170000ms.jpg,CAM3_Dataset1.mp4,CAM3,15170.0,bird,0.47,True,3,217,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0015210000ms.jpg,CAM3_Dataset1.mp4,CAM3,15210.0,bird,0.392,True,3,218,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0015250000ms.jpg,CAM3_Dataset1.mp4,CAM3,15250.0,bird,0.485,True,2,219,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0015530000ms.jpg,CAM3_Dataset1.mp4,CAM3,15530.0,bird,0.31,True,4,220,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0015610000ms.jpg,CAM3_Dataset1.mp4,CAM3,15610.0,bird,0.374,True,3,221,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0015650000ms.jpg,CAM3_Dataset1.mp4,CAM3,15650.0,bird,0.427,True,3,222,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0015840000ms.jpg,CAM3_Dataset1.mp4,CAM3,15840.0,bird,0.295,True,3,223,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0016010000ms.jpg,CAM3_Dataset1.mp4,CAM3,16010.0,bird,0.476,True,3,224,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0016060000ms.jpg,CAM3_Dataset1.mp4,CAM3,16060.0,bird,0.34,True,3,225,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0016180000ms.jpg,CAM3_Dataset1.mp4,CAM3,16180.0,bird,0.183,True,3,226,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0016350000ms.jpg,CAM3_Dataset1.mp4,CAM3,16350.0,bird,0.368,True,2,227,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0016460000ms.jpg,CAM3_Dataset1.mp4,CAM3,16460.0,bird,0.697,True,2,228,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0016620000ms.jpg,CAM3_Dataset1.mp4,CAM3,16620.0,bird,0.56,True,2,229,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0016830000ms.jpg,CAM3_Dataset1.mp4,CAM3,16830.0,bird,0.333,True,4,230,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0003890000ms.jpg,CAM3_Dataset2.mp4,CAM3,3890.0,bird,0.146,True,2,231,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005700000ms.jpg,CAM3_Dataset2.mp4,CAM3,5700.0,bird,0.784,True,5,232,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005740000ms.jpg,CAM3_Dataset2.mp4,CAM3,5740.0,bird,0.539,True,3,233,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005990000ms.jpg,CAM3_Dataset2.mp4,CAM3,5990.0,bird,0.449,True,3,234,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006050000ms.jpg,CAM3_Dataset2.mp4,CAM3,6050.0,bird,0.487,True,4,235,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006650000ms.jpg,CAM3_Dataset2.mp4,CAM3,6650.0,bird,0.289,True,2,236,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006680000ms.jpg,CAM3_Dataset2.mp4,CAM3,6680.0,bird,0.332,True,4,237,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006730000ms.jpg,CAM3_Dataset2.mp4,CAM3,6730.0,bird,0.617,True,4,238,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006780000ms.jpg,CAM3_Dataset2.mp4,CAM3,6780.0,bird,0.203,True,4,239,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006880000ms.jpg,CAM3_Dataset2.mp4,CAM3,6880.0,bird,0.212,True,4,240,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006910000ms.jpg,CAM3_Dataset2.mp4,CAM3,6910.0,bird,0.21,True,4,241,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006980000ms.jpg,CAM3_Dataset2.mp4,CAM3,6980.0,bird,0.212,True,5,242,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008340000ms.jpg,CAM3_Dataset2.mp4,CAM3,8340.0,bird,0.158,True,3,243,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008410000ms.jpg,CAM3_Dataset2.mp4,CAM3,8410.0,bird,0.203,True,3,244,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008470000ms.jpg,CAM3_Dataset2.mp4,CAM3,8470.0,bird,0.45,True,2,245,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008730000ms.jpg,CAM3_Dataset2.mp4,CAM3,8730.0,bird,0.604,True,3,246,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008840000ms.jpg,CAM3_Dataset2.mp4,CAM3,8840.0,bird,0.513,True,4,247,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008950000ms.jpg,CAM3_Dataset2.mp4,CAM3,8950.0,bird,0.849,True,3,248,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008980000ms.jpg,CAM3_Dataset2.mp4,CAM3,8980.0,bird,0.413,True,4,249,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009110000ms.jpg,CAM3_Dataset2.mp4,CAM3,9110.0,bird,0.612,True,5,250,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009140000ms.jpg,CAM3_Dataset2.mp4,CAM3,9140.0,bird,0.52,True,2,251,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009180000ms.jpg,CAM3_Dataset2.mp4,CAM3,9180.0,bird,0.506,True,4,252,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009240000ms.jpg,CAM3_Dataset2.mp4,CAM3,9240.0,bird,0.641,True,5,253,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009290000ms.jpg,CAM3_Dataset2.mp4,CAM3,9290.0,bird,0.275,True,5,254,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0011170000ms.jpg,CAM3_Dataset2.mp4,CAM3,11170.0,bird,0.781,True,3,255,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012090000ms.jpg,CAM3_Dataset2.mp4,CAM3,12090.0,bird,0.789,True,3,256,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012270000ms.jpg,CAM3_Dataset2.mp4,CAM3,12270.0,bird,0.297,True,6,257,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012300000ms.jpg,CAM3_Dataset2.mp4,CAM3,12300.0,bird,0.529,True,3,258,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012930000ms.jpg,CAM3_Dataset2.mp4,CAM3,12930.0,bird,0.607,True,3,259,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012960000ms.jpg,CAM3_Dataset2.mp4,CAM3,12960.0,bird,0.53,True,3,260,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012990000ms.jpg,CAM3_Dataset2.mp4,CAM3,12990.0,bird,0.284,True,2,261,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013020000ms.jpg,CAM3_Dataset2.mp4,CAM3,13020.0,bird,0.144,True,2,262,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013830000ms.jpg,CAM3_Dataset2.mp4,CAM3,13830.0,bird,0.816,True,3,263,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013860000ms.jpg,CAM3_Dataset2.mp4,CAM3,13860.0,bird,0.32,True,2,264,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0014970000ms.jpg,CAM3_Dataset2.mp4,CAM3,14970.0,bird,0.498,True,2,265,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0002960000ms.jpg,CAM3_Dataset3.mp4,CAM3,2960.0,bird,0.333,True,3,266,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0006260000ms.jpg,CAM3_Dataset3.mp4,CAM3,6260.0,bird,0.363,True,4,267,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0010410000ms.jpg,CAM3_Dataset3.mp4,CAM3,10410.0,bird,0.497,True,4,268,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011010000ms.jpg,CAM3_Dataset3.mp4,CAM3,11010.0,bird,0.681,True,4,269,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011040000ms.jpg,CAM3_Dataset3.mp4,CAM3,11040.0,bird,0.725,True,3,270,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011140000ms.jpg,CAM3_Dataset3.mp4,CAM3,11140.0,bird,0.476,True,3,271,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011300000ms.jpg,CAM3_Dataset3.mp4,CAM3,11300.0,bird,0.338,True,6,272,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011330000ms.jpg,CAM3_Dataset3.mp4,CAM3,11330.0,bird,0.813,True,4,273,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011400000ms.jpg,CAM3_Dataset3.mp4,CAM3,11400.0,bird,0.556,True,4,274,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011830000ms.jpg,CAM3_Dataset3.mp4,CAM3,11830.0,bird,0.865,True,3,275,Standing
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011920000ms.jpg,CAM3_Dataset3.mp4,CAM3,11920.0,bird,0.385,True,4,276,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011960000ms.jpg,CAM3_Dataset3.mp4,CAM3,11960.0,bird,0.402,True,4,277,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0012040000ms.jpg,CAM3_Dataset3.mp4,CAM3,12040.0,bird,0.206,True,4,278,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0012310000ms.jpg,CAM3_Dataset3.mp4,CAM3,12310.0,bird,0.461,True,3,279,Grooming
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0015170000ms.jpg,CAM3_Dataset3.mp4,CAM3,15170.0,bird,0.821,True,4,280,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0015240000ms.jpg,CAM3_Dataset3.mp4,CAM3,15240.0,bird,0.891,True,3,281,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0016920000ms.jpg,CAM3_Dataset3.mp4,CAM3,16920.0,bird,0.741,True,4,282,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0017430000ms.jpg,CAM3_Dataset3.mp4,CAM3,17430.0,bird,0.45,True,5,283,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0017470000ms.jpg,CAM3_Dataset3.mp4,CAM3,17470.0,bird,0.795,True,3,284,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0017720000ms.jpg,CAM3_Dataset3.mp4,CAM3,17720.0,bird,0.651,True,3,285,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0018210000ms.jpg,CAM3_Dataset3.mp4,CAM3,18210.0,bird,0.566,True,5,286,Running
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0018290000ms.jpg,CAM3_Dataset3.mp4,CAM3,18290.0,bird,0.87,True,4,287,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0018400000ms.jpg,CAM3_Dataset3.mp4,CAM3,18400.0,bird,0.794,True,4,288,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0018660000ms.jpg,CAM3_Dataset3.mp4,CAM3,18660.0,bird,0.583,True,4,289,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0018710000ms.jpg,CAM3_Dataset3.mp4,CAM3,18710.0,bird,0.181,True,4,290,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019040000ms.jpg,CAM3_Dataset3.mp4,CAM3,19040.0,bird,0.255,True,4,291,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019250000ms.jpg,CAM3_Dataset3.mp4,CAM3,19250.0,bird,0.538,True,3,292,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019360000ms.jpg,CAM3_Dataset3.mp4,CAM3,19360.0,bird,0.428,True,3,293,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019400000ms.jpg,CAM3_Dataset3.mp4,CAM3,19400.0,bird,0.749,True,4,294,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019470000ms.jpg,CAM3_Dataset3.mp4,CAM3,19470.0,bird,0.704,True,4,295,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019680000ms.jpg,CAM3_Dataset3.mp4,CAM3,19680.0,bird,0.615,True,6,296,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019710000ms.jpg,CAM3_Dataset3.mp4,CAM3,19710.0,bird,0.128,True,2,297,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019780000ms.jpg,CAM3_Dataset3.mp4,CAM3,19780.0,bird,0.426,True,4,298,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020040000ms.jpg,CAM3_Dataset3.mp4,CAM3,20040.0,bird,0.386,True,3,299,Standing
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020080000ms.jpg,CAM3_Dataset3.mp4,CAM3,20080.0,bird,0.796,True,4,300,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020140000ms.jpg,CAM3_Dataset3.mp4,CAM3,20140.0,bird,0.495,True,5,301,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020280000ms.jpg,CAM3_Dataset3.mp4,CAM3,20280.0,bird,0.798,True,4,302,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020320000ms.jpg,CAM3_Dataset3.mp4,CAM3,20320.0,bird,0.418,True,5,303,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020410000ms.jpg,CAM3_Dataset3.mp4,CAM3,20410.0,bird,0.564,True,6,304,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020520000ms.jpg,CAM3_Dataset3.mp4,CAM3,20520.0,bird,0.822,True,3,305,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020550000ms.jpg,CAM3_Dataset3.mp4,CAM3,20550.0,bird,0.787,True,3,306,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020600000ms.jpg,CAM3_Dataset3.mp4,CAM3,20600.0,bird,0.22,True,2,307,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020660000ms.jpg,CAM3_Dataset3.mp4,CAM3,20660.0,bird,0.505,True,3,308,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020750000ms.jpg,CAM3_Dataset3.mp4,CAM3,20750.0,bird,0.361,True,3,309,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020780000ms.jpg,CAM3_Dataset3.mp4,CAM3,20780.0,bird,0.268,True,2,310,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0021120000ms.jpg,CAM3_Dataset3.mp4,CAM3,21120.0,bird,0.192,True,4,311,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0021320000ms.jpg,CAM3_Dataset3.mp4,CAM3,21320.0,bird,0.361,True,4,312,Other
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0021790000ms.jpg,CAM3_Dataset3.mp4,CAM3,21790.0,bird,0.772,True,4,313,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0021880000ms.jpg,CAM3_Dataset3.mp4,CAM3,21880.0,bird,0.516,True,4,314,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022040000ms.jpg,CAM3_Dataset3.mp4,CAM3,22040.0,bird,0.506,True,4,315,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022070000ms.jpg,CAM3_Dataset3.mp4,CAM3,22070.0,bird,0.257,True,3,316,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022450000ms.jpg,CAM3_Dataset3.mp4,CAM3,22450.0,bird,0.468,True,4,317,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022490000ms.jpg,CAM3_Dataset3.mp4,CAM3,22490.0,bird,0.627,True,5,318,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022600000ms.jpg,CAM3_Dataset3.mp4,CAM3,22600.0,bird,0.671,True,4,319,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022800000ms.jpg,CAM3_Dataset3.mp4,CAM3,22800.0,bird,0.786,True,4,320,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022930000ms.jpg,CAM3_Dataset3.mp4,CAM3,22930.0,bird,0.582,True,4,321,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022980000ms.jpg,CAM3_Dataset3.mp4,CAM3,22980.0,bird,0.439,True,3,322,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023050000ms.jpg,CAM3_Dataset3.mp4,CAM3,23050.0,bird,0.48,True,4,323,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023180000ms.jpg,CAM3_Dataset3.mp4,CAM3,23180.0,bird,0.754,True,3,324,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023320000ms.jpg,CAM3_Dataset3.mp4,CAM3,23320.0,bird,0.591,True,4,325,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023350000ms.jpg,CAM3_Dataset3.mp4,CAM3,23350.0,bird,0.736,True,4,326,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023380000ms.jpg,CAM3_Dataset3.mp4,CAM3,23380.0,bird,0.252,True,5,327,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023450000ms.jpg,CAM3_Dataset3.mp4,CAM3,23450.0,bird,0.261,True,3,328,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023530000ms.jpg,CAM3_Dataset3.mp4,CAM3,23530.0,bird,0.847,True,3,329,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023570000ms.jpg,CAM3_Dataset3.mp4,CAM3,23570.0,bird,0.596,True,7,330,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023720000ms.jpg,CAM3_Dataset3.mp4,CAM3,23720.0,bird,0.262,True,4,331,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0023950000ms.jpg,CAM3_Dataset3.mp4,CAM3,23950.0,bird,0.443,True,4,332,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024240000ms.jpg,CAM3_Dataset3.mp4,CAM3,24240.0,bird,0.818,True,6,333,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024360000ms.jpg,CAM3_Dataset3.mp4,CAM3,24360.0,bird,0.21,True,4,334,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024530000ms.jpg,CAM3_Dataset3.mp4,CAM3,24530.0,bird,0.682,True,4,335,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024570000ms.jpg,CAM3_Dataset3.mp4,CAM3,24570.0,bird,0.747,True,4,336,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024670000ms.jpg,CAM3_Dataset3.mp4,CAM3,24670.0,bird,0.883,True,3,337,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024710000ms.jpg,CAM3_Dataset3.mp4,CAM3,24710.0,bird,0.656,True,3,338,Drinking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024790000ms.jpg,CAM3_Dataset3.mp4,CAM3,24790.0,bird,0.768,True,4,339,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024880000ms.jpg,CAM3_Dataset3.mp4,CAM3,24880.0,bird,0.695,True,3,340,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0025000000ms.jpg,CAM3_Dataset3.mp4,CAM3,25000.0,bird,0.473,True,4,341,Standing
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0025250000ms.jpg,CAM3_Dataset3.mp4,CAM3,25250.0,bird,0.812,True,3,342,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0025880000ms.jpg,CAM3_Dataset3.mp4,CAM3,25880.0,bird,0.702,True,4,343,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0025970000ms.jpg,CAM3_Dataset3.mp4,CAM3,25970.0,bird,0.333,True,3,344,Drinking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026000000ms.jpg,CAM3_Dataset3.mp4,CAM3,26000.0,bird,0.855,True,5,345,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026050000ms.jpg,CAM3_Dataset3.mp4,CAM3,26050.0,bird,0.861,True,3,346,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026090000ms.jpg,CAM3_Dataset3.mp4,CAM3,26090.0,bird,0.312,True,3,347,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026130000ms.jpg,CAM3_Dataset3.mp4,CAM3,26130.0,bird,0.634,True,4,348,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026190000ms.jpg,CAM3_Dataset3.mp4,CAM3,26190.0,bird,0.414,True,6,349,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026310000ms.jpg,CAM3_Dataset3.mp4,CAM3,26310.0,bird,0.482,True,4,350,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026360000ms.jpg,CAM3_Dataset3.mp4,CAM3,26360.0,bird,0.445,True,5,351,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026690000ms.jpg,CAM3_Dataset3.mp4,CAM3,26690.0,bird,0.284,True,4,352,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026750000ms.jpg,CAM3_Dataset3.mp4,CAM3,26750.0,bird,0.302,True,2,353,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026860000ms.jpg,CAM3_Dataset3.mp4,CAM3,26860.0,bird,0.67,True,3,354,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0026890000ms.jpg,CAM3_Dataset3.mp4,CAM3,26890.0,bird,0.611,True,5,355,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027070000ms.jpg,CAM3_Dataset3.mp4,CAM3,27070.0,bird,0.291,True,4,356,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027110000ms.jpg,CAM3_Dataset3.mp4,CAM3,27110.0,bird,0.802,True,3,357,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027190000ms.jpg,CAM3_Dataset3.mp4,CAM3,27190.0,bird,0.58,True,3,358,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027370000ms.jpg,CAM3_Dataset3.mp4,CAM3,27370.0,bird,0.448,True,7,359,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027400000ms.jpg,CAM3_Dataset3.mp4,CAM3,27400.0,bird,0.444,True,6,360,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027450000ms.jpg,CAM3_Dataset3.mp4,CAM3,27450.0,bird,0.488,True,3,361,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027640000ms.jpg,CAM3_Dataset3.mp4,CAM3,27640.0,bird,0.639,True,3,362,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027690000ms.jpg,CAM3_Dataset3.mp4,CAM3,27690.0,bird,0.358,True,4,363,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027820000ms.jpg,CAM3_Dataset3.mp4,CAM3,27820.0,bird,0.612,True,4,364,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027930000ms.jpg,CAM3_Dataset3.mp4,CAM3,27930.0,bird,0.209,True,3,365,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0027990000ms.jpg,CAM3_Dataset3.mp4,CAM3,27990.0,bird,0.622,True,6,366,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0028050000ms.jpg,CAM3_Dataset3.mp4,CAM3,28050.0,bird,0.734,True,4,367,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0028080000ms.jpg,CAM3_Dataset3.mp4,CAM3,28080.0,bird,0.75,True,5,368,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0028270000ms.jpg,CAM3_Dataset3.mp4,CAM3,28270.0,bird,0.593,True,4,369,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0028340000ms.jpg,CAM3_Dataset3.mp4,CAM3,28340.0,bird,0.304,True,5,370,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0028450000ms.jpg,CAM3_Dataset3.mp4,CAM3,28450.0,bird,0.28,True,4,371,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0002760000ms.jpg,CAM4_Dataset1.mp4,CAM4,2760.0,bird,0.727,True,6,372,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003150000ms.jpg,CAM4_Dataset1.mp4,CAM4,3150.0,dog,0.308,True,6,373,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003260000ms.jpg,CAM4_Dataset1.mp4,CAM4,3260.0,cat,0.477,True,4,374,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003340000ms.jpg,CAM4_Dataset1.mp4,CAM4,3340.0,bird,0.544,True,3,375,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003380000ms.jpg,CAM4_Dataset1.mp4,CAM4,3380.0,bird,0.411,True,4,376,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003610000ms.jpg,CAM4_Dataset1.mp4,CAM4,3610.0,dog,0.457,True,2,377,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003640000ms.jpg,CAM4_Dataset1.mp4,CAM4,3640.0,bird,0.531,True,2,378,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003870000ms.jpg,CAM4_Dataset1.mp4,CAM4,3870.0,cat,0.183,True,3,379,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003900000ms.jpg,CAM4_Dataset1.mp4,CAM4,3900.0,bird,0.408,True,3,380,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004000000ms.jpg,CAM4_Dataset1.mp4,CAM4,4000.0,bird,0.277,True,1,381,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004310000ms.jpg,CAM4_Dataset1.mp4,CAM4,4310.0,bird,0.246,True,2,382,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004350000ms.jpg,CAM4_Dataset1.mp4,CAM4,4350.0,bird,0.186,True,2,383,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004390000ms.jpg,CAM4_Dataset1.mp4,CAM4,4390.0,bird,0.375,True,2,384,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004670000ms.jpg,CAM4_Dataset1.mp4,CAM4,4670.0,bird,0.5,True,3,385,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004900000ms.jpg,CAM4_Dataset1.mp4,CAM4,4900.0,bird,0.511,True,3,386,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0005020000ms.jpg,CAM4_Dataset1.mp4,CAM4,5020.0,dog,0.24,True,3,387,Other
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0005600000ms.jpg,CAM4_Dataset1.mp4,CAM4,5600.0,bird,0.2,True,3,388,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0009780000ms.jpg,CAM4_Dataset1.mp4,CAM4,9780.0,bird,0.356,True,4,389,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0009810000ms.jpg,CAM4_Dataset1.mp4,CAM4,9810.0,bird,0.63,True,3,390,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0009840000ms.jpg,CAM4_Dataset1.mp4,CAM4,9840.0,bird,0.392,True,3,391,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0010890000ms.jpg,CAM4_Dataset1.mp4,CAM4,10890.0,bird,0.303,True,5,392,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011180000ms.jpg,CAM4_Dataset1.mp4,CAM4,11180.0,bird,0.655,True,1,393,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011210000ms.jpg,CAM4_Dataset1.mp4,CAM4,11210.0,bird,0.5,True,2,394,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011270000ms.jpg,CAM4_Dataset1.mp4,CAM4,11270.0,bird,0.5,True,2,395,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011350000ms.jpg,CAM4_Dataset1.mp4,CAM4,11350.0,dog,0.254,True,4,396,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011460000ms.jpg,CAM4_Dataset1.mp4,CAM4,11460.0,bird,0.177,True,2,397,Standing
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011510000ms.jpg,CAM4_Dataset1.mp4,CAM4,11510.0,bird,0.467,True,2,398,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011840000ms.jpg,CAM4_Dataset1.mp4,CAM4,11840.0,dog,0.255,True,5,399,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011880000ms.jpg,CAM4_Dataset1.mp4,CAM4,11880.0,bird,0.271,True,2,400,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012160000ms.jpg,CAM4_Dataset1.mp4,CAM4,12160.0,bird,0.318,True,2,401,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012560000ms.jpg,CAM4_Dataset1.mp4,CAM4,12560.0,dog,0.306,True,4,402,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012590000ms.jpg,CAM4_Dataset1.mp4,CAM4,12590.0,dog,0.513,True,3,403,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012820000ms.jpg,CAM4_Dataset1.mp4,CAM4,12820.0,bird,0.564,True,2,404,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012860000ms.jpg,CAM4_Dataset1.mp4,CAM4,12860.0,bird,0.42,True,3,405,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0013090000ms.jpg,CAM4_Dataset1.mp4,CAM4,13090.0,bird,0.552,True,5,406,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0013450000ms.jpg,CAM4_Dataset1.mp4,CAM4,13450.0,bird,0.586,True,4,407,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0013830000ms.jpg,CAM4_Dataset1.mp4,CAM4,13830.0,cat,0.448,True,4,408,Standing
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0013900000ms.jpg,CAM4_Dataset1.mp4,CAM4,13900.0,bird,0.508,True,3,409,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014420000ms.jpg,CAM4_Dataset1.mp4,CAM4,14420.0,bird,0.348,True,2,410,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014760000ms.jpg,CAM4_Dataset1.mp4,CAM4,14760.0,cat,0.729,True,4,411,Other
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014890000ms.jpg,CAM4_Dataset1.mp4,CAM4,14890.0,bird,0.137,True,3,412,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014970000ms.jpg,CAM4_Dataset1.mp4,CAM4,14970.0,bird,0.394,True,2,413,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0015150000ms.jpg,CAM4_Dataset1.mp4,CAM4,15150.0,bird,0.381,True,4,414,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0015220000ms.jpg,CAM4_Dataset1.mp4,CAM4,15220.0,cat,0.705,True,6,415,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0007060000ms.jpg,CAM4_Dataset3.mp4,CAM4,7060.0,dog,0.185,True,6,416,Other
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0013850000ms.jpg,CAM4_Dataset3.mp4,CAM4,13850.0,bird,0.257,True,2,417,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0013890000ms.jpg,CAM4_Dataset3.mp4,CAM4,13890.0,cat,0.596,True,3,418,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0013920000ms.jpg,CAM4_Dataset3.mp4,CAM4,13920.0,bird,0.321,True,3,419,Drinking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0014950000ms.jpg,CAM4_Dataset3.mp4,CAM4,14950.0,bird,0.373,True,3,420,Drinking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0015480000ms.jpg,CAM4_Dataset3.mp4,CAM4,15480.0,bird,0.275,True,5,421,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0015850000ms.jpg,CAM4_Dataset3.mp4,CAM4,15850.0,bird,0.172,True,2,422,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0016090000ms.jpg,CAM4_Dataset3.mp4,CAM4,16090.0,bird,0.281,True,5,423,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0016430000ms.jpg,CAM4_Dataset3.mp4,CAM4,16430.0,bird,0.527,True,2,424,Drinking
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002155000ms.jpg,CAM1_Dataset2.mp4,CAM1,2155.0,,0.0,True,0,425,No Civet
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002185000ms.jpg,CAM1_Dataset2.mp4,CAM1,2185.0,,0.0,True,0,426,Walking
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004730000ms.jpg,CAM1_Dataset2.mp4,CAM1,4730.0,,0.0,True,0,427,No Civet
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004745000ms.jpg,CAM1_Dataset2.mp4,CAM1,4745.0,,0.0,True,0,428,No Civet
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004775000ms.jpg,CAM1_Dataset2.mp4,CAM1,4775.0,,0.0,True,0,429,No Civet
+data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004790000ms.jpg,CAM1_Dataset2.mp4,CAM1,4790.0,,0.0,True,0,430,No Civet
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0000195000ms.jpg,CAM1_Dataset3.mp4,CAM1,195.0,,0.0,True,0,431,No Civet
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0000225000ms.jpg,CAM1_Dataset3.mp4,CAM1,225.0,,0.0,True,0,432,No Civet
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0014525000ms.jpg,CAM1_Dataset3.mp4,CAM1,14525.0,,0.0,True,0,433,No Civet
+data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0014555000ms.jpg,CAM1_Dataset3.mp4,CAM1,14555.0,,0.0,True,0,434,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0011975000ms.jpg,CAM2_Dataset1.mp4,CAM2,11975.0,,0.0,True,0,435,Standing
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012005000ms.jpg,CAM2_Dataset1.mp4,CAM2,12005.0,,0.0,True,0,436,Standing
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012295000ms.jpg,CAM2_Dataset1.mp4,CAM2,12295.0,,0.0,True,0,437,Walking
+data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012325000ms.jpg,CAM2_Dataset1.mp4,CAM2,12325.0,,0.0,True,0,438,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003095000ms.jpg,CAM3_Dataset1.mp4,CAM3,3095.0,,0.0,True,0,439,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003125000ms.jpg,CAM3_Dataset1.mp4,CAM3,3125.0,,0.0,True,0,440,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003140000ms.jpg,CAM3_Dataset1.mp4,CAM3,3140.0,,0.0,True,0,441,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003180000ms.jpg,CAM3_Dataset1.mp4,CAM3,3180.0,,0.0,True,0,442,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003195000ms.jpg,CAM3_Dataset1.mp4,CAM3,3195.0,,0.0,True,0,443,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003225000ms.jpg,CAM3_Dataset1.mp4,CAM3,3225.0,,0.0,True,0,444,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003240000ms.jpg,CAM3_Dataset1.mp4,CAM3,3240.0,,0.0,True,0,445,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003290000ms.jpg,CAM3_Dataset1.mp4,CAM3,3290.0,,0.0,True,0,446,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003305000ms.jpg,CAM3_Dataset1.mp4,CAM3,3305.0,,0.0,True,0,447,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003335000ms.jpg,CAM3_Dataset1.mp4,CAM3,3335.0,,0.0,True,0,448,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003350000ms.jpg,CAM3_Dataset1.mp4,CAM3,3350.0,,0.0,True,0,449,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004210000ms.jpg,CAM3_Dataset1.mp4,CAM3,4210.0,,0.0,True,0,450,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004225000ms.jpg,CAM3_Dataset1.mp4,CAM3,4225.0,,0.0,True,0,451,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004255000ms.jpg,CAM3_Dataset1.mp4,CAM3,4255.0,,0.0,True,0,452,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004270000ms.jpg,CAM3_Dataset1.mp4,CAM3,4270.0,,0.0,True,0,453,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004260000ms.jpg,CAM3_Dataset1.mp4,CAM3,4260.0,,0.0,True,0,454,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004275000ms.jpg,CAM3_Dataset1.mp4,CAM3,4275.0,,0.0,True,0,455,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004305000ms.jpg,CAM3_Dataset1.mp4,CAM3,4305.0,,0.0,True,0,456,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004320000ms.jpg,CAM3_Dataset1.mp4,CAM3,4320.0,,0.0,True,0,457,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004575000ms.jpg,CAM3_Dataset1.mp4,CAM3,4575.0,,0.0,True,0,458,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004605000ms.jpg,CAM3_Dataset1.mp4,CAM3,4605.0,,0.0,True,0,459,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004620000ms.jpg,CAM3_Dataset1.mp4,CAM3,4620.0,,0.0,True,0,460,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005375000ms.jpg,CAM3_Dataset1.mp4,CAM3,5375.0,,0.0,True,0,461,Grooming
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005405000ms.jpg,CAM3_Dataset1.mp4,CAM3,5405.0,,0.0,True,0,462,Grooming
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005435000ms.jpg,CAM3_Dataset1.mp4,CAM3,5435.0,,0.0,True,0,463,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005470000ms.jpg,CAM3_Dataset1.mp4,CAM3,5470.0,,0.0,True,0,464,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005485000ms.jpg,CAM3_Dataset1.mp4,CAM3,5485.0,,0.0,True,0,465,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005515000ms.jpg,CAM3_Dataset1.mp4,CAM3,5515.0,,0.0,True,0,466,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005680000ms.jpg,CAM3_Dataset1.mp4,CAM3,5680.0,,0.0,True,0,467,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005695000ms.jpg,CAM3_Dataset1.mp4,CAM3,5695.0,,0.0,True,0,468,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005725000ms.jpg,CAM3_Dataset1.mp4,CAM3,5725.0,,0.0,True,0,469,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005740000ms.jpg,CAM3_Dataset1.mp4,CAM3,5740.0,,0.0,True,0,470,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0009740000ms.jpg,CAM3_Dataset1.mp4,CAM3,9740.0,,0.0,True,0,471,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0009755000ms.jpg,CAM3_Dataset1.mp4,CAM3,9755.0,,0.0,True,0,472,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0009785000ms.jpg,CAM3_Dataset1.mp4,CAM3,9785.0,,0.0,True,0,473,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0009800000ms.jpg,CAM3_Dataset1.mp4,CAM3,9800.0,,0.0,True,0,474,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011045000ms.jpg,CAM3_Dataset1.mp4,CAM3,11045.0,,0.0,True,0,475,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011075000ms.jpg,CAM3_Dataset1.mp4,CAM3,11075.0,,0.0,True,0,476,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011090000ms.jpg,CAM3_Dataset1.mp4,CAM3,11090.0,,0.0,True,0,477,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011520000ms.jpg,CAM3_Dataset1.mp4,CAM3,11520.0,,0.0,True,0,478,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011535000ms.jpg,CAM3_Dataset1.mp4,CAM3,11535.0,,0.0,True,0,479,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011565000ms.jpg,CAM3_Dataset1.mp4,CAM3,11565.0,,0.0,True,0,480,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011580000ms.jpg,CAM3_Dataset1.mp4,CAM3,11580.0,,0.0,True,0,481,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011665000ms.jpg,CAM3_Dataset1.mp4,CAM3,11665.0,,0.0,True,0,482,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011695000ms.jpg,CAM3_Dataset1.mp4,CAM3,11695.0,,0.0,True,0,483,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011760000ms.jpg,CAM3_Dataset1.mp4,CAM3,11760.0,,0.0,True,0,484,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011775000ms.jpg,CAM3_Dataset1.mp4,CAM3,11775.0,,0.0,True,0,485,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011805000ms.jpg,CAM3_Dataset1.mp4,CAM3,11805.0,,0.0,True,0,486,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011820000ms.jpg,CAM3_Dataset1.mp4,CAM3,11820.0,,0.0,True,0,487,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011840000ms.jpg,CAM3_Dataset1.mp4,CAM3,11840.0,,0.0,True,0,488,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011855000ms.jpg,CAM3_Dataset1.mp4,CAM3,11855.0,,0.0,True,0,489,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0011885000ms.jpg,CAM3_Dataset1.mp4,CAM3,11885.0,,0.0,True,0,490,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012310000ms.jpg,CAM3_Dataset1.mp4,CAM3,12310.0,,0.0,True,0,491,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012325000ms.jpg,CAM3_Dataset1.mp4,CAM3,12325.0,,0.0,True,0,492,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012355000ms.jpg,CAM3_Dataset1.mp4,CAM3,12355.0,,0.0,True,0,493,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012370000ms.jpg,CAM3_Dataset1.mp4,CAM3,12370.0,,0.0,True,0,494,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012800000ms.jpg,CAM3_Dataset1.mp4,CAM3,12800.0,,0.0,True,0,495,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012815000ms.jpg,CAM3_Dataset1.mp4,CAM3,12815.0,,0.0,True,0,496,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012845000ms.jpg,CAM3_Dataset1.mp4,CAM3,12845.0,,0.0,True,0,497,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0012860000ms.jpg,CAM3_Dataset1.mp4,CAM3,12860.0,,0.0,True,0,498,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013055000ms.jpg,CAM3_Dataset1.mp4,CAM3,13055.0,,0.0,True,0,499,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013085000ms.jpg,CAM3_Dataset1.mp4,CAM3,13085.0,,0.0,True,0,500,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013100000ms.jpg,CAM3_Dataset1.mp4,CAM3,13100.0,,0.0,True,0,501,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013500000ms.jpg,CAM3_Dataset1.mp4,CAM3,13500.0,,0.0,True,0,502,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013515000ms.jpg,CAM3_Dataset1.mp4,CAM3,13515.0,,0.0,True,0,503,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013545000ms.jpg,CAM3_Dataset1.mp4,CAM3,13545.0,,0.0,True,0,504,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013560000ms.jpg,CAM3_Dataset1.mp4,CAM3,13560.0,,0.0,True,0,505,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013660000ms.jpg,CAM3_Dataset1.mp4,CAM3,13660.0,,0.0,True,0,506,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013675000ms.jpg,CAM3_Dataset1.mp4,CAM3,13675.0,,0.0,True,0,507,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013705000ms.jpg,CAM3_Dataset1.mp4,CAM3,13705.0,,0.0,True,0,508,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013720000ms.jpg,CAM3_Dataset1.mp4,CAM3,13720.0,,0.0,True,0,509,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013880000ms.jpg,CAM3_Dataset1.mp4,CAM3,13880.0,,0.0,True,0,510,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013895000ms.jpg,CAM3_Dataset1.mp4,CAM3,13895.0,,0.0,True,0,511,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013925000ms.jpg,CAM3_Dataset1.mp4,CAM3,13925.0,,0.0,True,0,512,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013940000ms.jpg,CAM3_Dataset1.mp4,CAM3,13940.0,,0.0,True,0,513,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013935000ms.jpg,CAM3_Dataset1.mp4,CAM3,13935.0,,0.0,True,0,514,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0013965000ms.jpg,CAM3_Dataset1.mp4,CAM3,13965.0,,0.0,True,0,515,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014570000ms.jpg,CAM3_Dataset1.mp4,CAM3,14570.0,,0.0,True,0,516,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014585000ms.jpg,CAM3_Dataset1.mp4,CAM3,14585.0,,0.0,True,0,517,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014615000ms.jpg,CAM3_Dataset1.mp4,CAM3,14615.0,,0.0,True,0,518,Eating
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014630000ms.jpg,CAM3_Dataset1.mp4,CAM3,14630.0,,0.0,True,0,519,Walking
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014715000ms.jpg,CAM3_Dataset1.mp4,CAM3,14715.0,,0.0,True,0,520,No Civet
+data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0014745000ms.jpg,CAM3_Dataset1.mp4,CAM3,14745.0,,0.0,True,0,521,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005710000ms.jpg,CAM3_Dataset2.mp4,CAM3,5710.0,,0.0,True,0,522,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005725000ms.jpg,CAM3_Dataset2.mp4,CAM3,5725.0,,0.0,True,0,523,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005755000ms.jpg,CAM3_Dataset2.mp4,CAM3,5755.0,,0.0,True,0,524,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005770000ms.jpg,CAM3_Dataset2.mp4,CAM3,5770.0,,0.0,True,0,525,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005960000ms.jpg,CAM3_Dataset2.mp4,CAM3,5960.0,,0.0,True,0,526,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0005975000ms.jpg,CAM3_Dataset2.mp4,CAM3,5975.0,,0.0,True,0,527,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006005000ms.jpg,CAM3_Dataset2.mp4,CAM3,6005.0,,0.0,True,0,528,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006020000ms.jpg,CAM3_Dataset2.mp4,CAM3,6020.0,,0.0,True,0,529,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006035000ms.jpg,CAM3_Dataset2.mp4,CAM3,6035.0,,0.0,True,0,530,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006065000ms.jpg,CAM3_Dataset2.mp4,CAM3,6065.0,,0.0,True,0,531,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006080000ms.jpg,CAM3_Dataset2.mp4,CAM3,6080.0,,0.0,True,0,532,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006850000ms.jpg,CAM3_Dataset2.mp4,CAM3,6850.0,,0.0,True,0,533,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006865000ms.jpg,CAM3_Dataset2.mp4,CAM3,6865.0,,0.0,True,0,534,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006895000ms.jpg,CAM3_Dataset2.mp4,CAM3,6895.0,,0.0,True,0,535,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006950000ms.jpg,CAM3_Dataset2.mp4,CAM3,6950.0,,0.0,True,0,536,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006965000ms.jpg,CAM3_Dataset2.mp4,CAM3,6965.0,,0.0,True,0,537,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006995000ms.jpg,CAM3_Dataset2.mp4,CAM3,6995.0,,0.0,True,0,538,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0007010000ms.jpg,CAM3_Dataset2.mp4,CAM3,7010.0,,0.0,True,0,539,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008310000ms.jpg,CAM3_Dataset2.mp4,CAM3,8310.0,,0.0,True,0,540,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008325000ms.jpg,CAM3_Dataset2.mp4,CAM3,8325.0,,0.0,True,0,541,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008355000ms.jpg,CAM3_Dataset2.mp4,CAM3,8355.0,,0.0,True,0,542,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008370000ms.jpg,CAM3_Dataset2.mp4,CAM3,8370.0,,0.0,True,0,543,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008440000ms.jpg,CAM3_Dataset2.mp4,CAM3,8440.0,,0.0,True,0,544,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008455000ms.jpg,CAM3_Dataset2.mp4,CAM3,8455.0,,0.0,True,0,545,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008485000ms.jpg,CAM3_Dataset2.mp4,CAM3,8485.0,,0.0,True,0,546,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008500000ms.jpg,CAM3_Dataset2.mp4,CAM3,8500.0,,0.0,True,0,547,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008810000ms.jpg,CAM3_Dataset2.mp4,CAM3,8810.0,,0.0,True,0,548,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008825000ms.jpg,CAM3_Dataset2.mp4,CAM3,8825.0,,0.0,True,0,549,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008855000ms.jpg,CAM3_Dataset2.mp4,CAM3,8855.0,,0.0,True,0,550,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008870000ms.jpg,CAM3_Dataset2.mp4,CAM3,8870.0,,0.0,True,0,551,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008965000ms.jpg,CAM3_Dataset2.mp4,CAM3,8965.0,,0.0,True,0,552,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0008995000ms.jpg,CAM3_Dataset2.mp4,CAM3,8995.0,,0.0,True,0,553,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009010000ms.jpg,CAM3_Dataset2.mp4,CAM3,9010.0,,0.0,True,0,554,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009125000ms.jpg,CAM3_Dataset2.mp4,CAM3,9125.0,,0.0,True,0,555,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009155000ms.jpg,CAM3_Dataset2.mp4,CAM3,9155.0,,0.0,True,0,556,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009170000ms.jpg,CAM3_Dataset2.mp4,CAM3,9170.0,,0.0,True,0,557,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009150000ms.jpg,CAM3_Dataset2.mp4,CAM3,9150.0,,0.0,True,0,558,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009165000ms.jpg,CAM3_Dataset2.mp4,CAM3,9165.0,,0.0,True,0,559,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009195000ms.jpg,CAM3_Dataset2.mp4,CAM3,9195.0,,0.0,True,0,560,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009210000ms.jpg,CAM3_Dataset2.mp4,CAM3,9210.0,,0.0,True,0,561,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009260000ms.jpg,CAM3_Dataset2.mp4,CAM3,9260.0,,0.0,True,0,562,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009275000ms.jpg,CAM3_Dataset2.mp4,CAM3,9275.0,,0.0,True,0,563,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009305000ms.jpg,CAM3_Dataset2.mp4,CAM3,9305.0,,0.0,True,0,564,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0009320000ms.jpg,CAM3_Dataset2.mp4,CAM3,9320.0,,0.0,True,0,565,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0011140000ms.jpg,CAM3_Dataset2.mp4,CAM3,11140.0,,0.0,True,0,566,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0011155000ms.jpg,CAM3_Dataset2.mp4,CAM3,11155.0,,0.0,True,0,567,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0011185000ms.jpg,CAM3_Dataset2.mp4,CAM3,11185.0,,0.0,True,0,568,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0011200000ms.jpg,CAM3_Dataset2.mp4,CAM3,11200.0,,0.0,True,0,569,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012285000ms.jpg,CAM3_Dataset2.mp4,CAM3,12285.0,,0.0,True,0,570,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012315000ms.jpg,CAM3_Dataset2.mp4,CAM3,12315.0,,0.0,True,0,571,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012330000ms.jpg,CAM3_Dataset2.mp4,CAM3,12330.0,,0.0,True,0,572,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012900000ms.jpg,CAM3_Dataset2.mp4,CAM3,12900.0,,0.0,True,0,573,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012915000ms.jpg,CAM3_Dataset2.mp4,CAM3,12915.0,,0.0,True,0,574,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012945000ms.jpg,CAM3_Dataset2.mp4,CAM3,12945.0,,0.0,True,0,575,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0012975000ms.jpg,CAM3_Dataset2.mp4,CAM3,12975.0,,0.0,True,0,576,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013005000ms.jpg,CAM3_Dataset2.mp4,CAM3,13005.0,,0.0,True,0,577,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013035000ms.jpg,CAM3_Dataset2.mp4,CAM3,13035.0,,0.0,True,0,578,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013050000ms.jpg,CAM3_Dataset2.mp4,CAM3,13050.0,,0.0,True,0,579,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013800000ms.jpg,CAM3_Dataset2.mp4,CAM3,13800.0,,0.0,True,0,580,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013815000ms.jpg,CAM3_Dataset2.mp4,CAM3,13815.0,,0.0,True,0,581,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013845000ms.jpg,CAM3_Dataset2.mp4,CAM3,13845.0,,0.0,True,0,582,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013875000ms.jpg,CAM3_Dataset2.mp4,CAM3,13875.0,,0.0,True,0,583,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0013890000ms.jpg,CAM3_Dataset2.mp4,CAM3,13890.0,,0.0,True,0,584,No Civet
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0014940000ms.jpg,CAM3_Dataset2.mp4,CAM3,14940.0,,0.0,True,0,585,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0014955000ms.jpg,CAM3_Dataset2.mp4,CAM3,14955.0,,0.0,True,0,586,Eating
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0014985000ms.jpg,CAM3_Dataset2.mp4,CAM3,14985.0,,0.0,True,0,587,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0015000000ms.jpg,CAM3_Dataset2.mp4,CAM3,15000.0,,0.0,True,0,588,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011025000ms.jpg,CAM3_Dataset3.mp4,CAM3,11025.0,,0.0,True,0,589,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011055000ms.jpg,CAM3_Dataset3.mp4,CAM3,11055.0,,0.0,True,0,590,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011070000ms.jpg,CAM3_Dataset3.mp4,CAM3,11070.0,,0.0,True,0,591,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011270000ms.jpg,CAM3_Dataset3.mp4,CAM3,11270.0,,0.0,True,0,592,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011285000ms.jpg,CAM3_Dataset3.mp4,CAM3,11285.0,,0.0,True,0,593,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011315000ms.jpg,CAM3_Dataset3.mp4,CAM3,11315.0,,0.0,True,0,594,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011815000ms.jpg,CAM3_Dataset3.mp4,CAM3,11815.0,,0.0,True,0,595,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0011845000ms.jpg,CAM3_Dataset3.mp4,CAM3,11845.0,,0.0,True,0,596,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0012010000ms.jpg,CAM3_Dataset3.mp4,CAM3,12010.0,,0.0,True,0,597,Drinking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0012025000ms.jpg,CAM3_Dataset3.mp4,CAM3,12025.0,,0.0,True,0,598,Drinking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0012055000ms.jpg,CAM3_Dataset3.mp4,CAM3,12055.0,,0.0,True,0,599,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0012070000ms.jpg,CAM3_Dataset3.mp4,CAM3,12070.0,,0.0,True,0,600,Drinking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0012295000ms.jpg,CAM3_Dataset3.mp4,CAM3,12295.0,,0.0,True,0,601,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0012325000ms.jpg,CAM3_Dataset3.mp4,CAM3,12325.0,,0.0,True,0,602,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019440000ms.jpg,CAM3_Dataset3.mp4,CAM3,19440.0,,0.0,True,0,603,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019455000ms.jpg,CAM3_Dataset3.mp4,CAM3,19455.0,,0.0,True,0,604,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019485000ms.jpg,CAM3_Dataset3.mp4,CAM3,19485.0,,0.0,True,0,605,Drinking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019500000ms.jpg,CAM3_Dataset3.mp4,CAM3,19500.0,,0.0,True,0,606,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019650000ms.jpg,CAM3_Dataset3.mp4,CAM3,19650.0,,0.0,True,0,607,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019665000ms.jpg,CAM3_Dataset3.mp4,CAM3,19665.0,,0.0,True,0,608,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0019695000ms.jpg,CAM3_Dataset3.mp4,CAM3,19695.0,,0.0,True,0,609,Drinking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020025000ms.jpg,CAM3_Dataset3.mp4,CAM3,20025.0,,0.0,True,0,610,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020055000ms.jpg,CAM3_Dataset3.mp4,CAM3,20055.0,,0.0,True,0,611,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020110000ms.jpg,CAM3_Dataset3.mp4,CAM3,20110.0,,0.0,True,0,612,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020125000ms.jpg,CAM3_Dataset3.mp4,CAM3,20125.0,,0.0,True,0,613,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020155000ms.jpg,CAM3_Dataset3.mp4,CAM3,20155.0,,0.0,True,0,614,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020170000ms.jpg,CAM3_Dataset3.mp4,CAM3,20170.0,,0.0,True,0,615,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020290000ms.jpg,CAM3_Dataset3.mp4,CAM3,20290.0,,0.0,True,0,616,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020305000ms.jpg,CAM3_Dataset3.mp4,CAM3,20305.0,,0.0,True,0,617,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020335000ms.jpg,CAM3_Dataset3.mp4,CAM3,20335.0,,0.0,True,0,618,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020350000ms.jpg,CAM3_Dataset3.mp4,CAM3,20350.0,,0.0,True,0,619,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020720000ms.jpg,CAM3_Dataset3.mp4,CAM3,20720.0,,0.0,True,0,620,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020735000ms.jpg,CAM3_Dataset3.mp4,CAM3,20735.0,,0.0,True,0,621,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0020765000ms.jpg,CAM3_Dataset3.mp4,CAM3,20765.0,,0.0,True,0,622,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0021305000ms.jpg,CAM3_Dataset3.mp4,CAM3,21305.0,,0.0,True,0,623,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0021335000ms.jpg,CAM3_Dataset3.mp4,CAM3,21335.0,,0.0,True,0,624,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022010000ms.jpg,CAM3_Dataset3.mp4,CAM3,22010.0,,0.0,True,0,625,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022025000ms.jpg,CAM3_Dataset3.mp4,CAM3,22025.0,,0.0,True,0,626,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022055000ms.jpg,CAM3_Dataset3.mp4,CAM3,22055.0,,0.0,True,0,627,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022460000ms.jpg,CAM3_Dataset3.mp4,CAM3,22460.0,,0.0,True,0,628,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022475000ms.jpg,CAM3_Dataset3.mp4,CAM3,22475.0,,0.0,True,0,629,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022505000ms.jpg,CAM3_Dataset3.mp4,CAM3,22505.0,,0.0,True,0,630,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022520000ms.jpg,CAM3_Dataset3.mp4,CAM3,22520.0,,0.0,True,0,631,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022770000ms.jpg,CAM3_Dataset3.mp4,CAM3,22770.0,,0.0,True,0,632,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022785000ms.jpg,CAM3_Dataset3.mp4,CAM3,22785.0,,0.0,True,0,633,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022815000ms.jpg,CAM3_Dataset3.mp4,CAM3,22815.0,,0.0,True,0,634,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0022830000ms.jpg,CAM3_Dataset3.mp4,CAM3,22830.0,,0.0,True,0,635,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024680000ms.jpg,CAM3_Dataset3.mp4,CAM3,24680.0,,0.0,True,0,636,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024695000ms.jpg,CAM3_Dataset3.mp4,CAM3,24695.0,,0.0,True,0,637,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024725000ms.jpg,CAM3_Dataset3.mp4,CAM3,24725.0,,0.0,True,0,638,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024740000ms.jpg,CAM3_Dataset3.mp4,CAM3,24740.0,,0.0,True,0,639,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0024985000ms.jpg,CAM3_Dataset3.mp4,CAM3,24985.0,,0.0,True,0,640,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0025015000ms.jpg,CAM3_Dataset3.mp4,CAM3,25015.0,,0.0,True,0,641,No Civet
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0025940000ms.jpg,CAM3_Dataset3.mp4,CAM3,25940.0,,0.0,True,0,642,Walking
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0025955000ms.jpg,CAM3_Dataset3.mp4,CAM3,25955.0,,0.0,True,0,643,Eating
+data/scan_candidates/CAM3_Dataset3/CAM3_Dataset3_0025985000ms.jpg,CAM3_Dataset3.mp4,CAM3,25985.0,,0.0,True,0,644,Standing
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003840000ms.jpg,CAM4_Dataset1.mp4,CAM4,3840.0,,0.0,True,0,645,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003855000ms.jpg,CAM4_Dataset1.mp4,CAM4,3855.0,,0.0,True,0,646,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003885000ms.jpg,CAM4_Dataset1.mp4,CAM4,3885.0,,0.0,True,0,647,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003915000ms.jpg,CAM4_Dataset1.mp4,CAM4,3915.0,,0.0,True,0,648,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003930000ms.jpg,CAM4_Dataset1.mp4,CAM4,3930.0,,0.0,True,0,649,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003970000ms.jpg,CAM4_Dataset1.mp4,CAM4,3970.0,,0.0,True,0,650,Standing
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0003985000ms.jpg,CAM4_Dataset1.mp4,CAM4,3985.0,,0.0,True,0,651,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004015000ms.jpg,CAM4_Dataset1.mp4,CAM4,4015.0,,0.0,True,0,652,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004030000ms.jpg,CAM4_Dataset1.mp4,CAM4,4030.0,,0.0,True,0,653,Standing
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004320000ms.jpg,CAM4_Dataset1.mp4,CAM4,4320.0,,0.0,True,0,654,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004335000ms.jpg,CAM4_Dataset1.mp4,CAM4,4335.0,,0.0,True,0,655,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004365000ms.jpg,CAM4_Dataset1.mp4,CAM4,4365.0,,0.0,True,0,656,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004380000ms.jpg,CAM4_Dataset1.mp4,CAM4,4380.0,,0.0,True,0,657,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004360000ms.jpg,CAM4_Dataset1.mp4,CAM4,4360.0,,0.0,True,0,658,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004375000ms.jpg,CAM4_Dataset1.mp4,CAM4,4375.0,,0.0,True,0,659,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004405000ms.jpg,CAM4_Dataset1.mp4,CAM4,4405.0,,0.0,True,0,660,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0004420000ms.jpg,CAM4_Dataset1.mp4,CAM4,4420.0,,0.0,True,0,661,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0005005000ms.jpg,CAM4_Dataset1.mp4,CAM4,5005.0,,0.0,True,0,662,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0005035000ms.jpg,CAM4_Dataset1.mp4,CAM4,5035.0,,0.0,True,0,663,Standing
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0005570000ms.jpg,CAM4_Dataset1.mp4,CAM4,5570.0,,0.0,True,0,664,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0005585000ms.jpg,CAM4_Dataset1.mp4,CAM4,5585.0,,0.0,True,0,665,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0005615000ms.jpg,CAM4_Dataset1.mp4,CAM4,5615.0,,0.0,True,0,666,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0005630000ms.jpg,CAM4_Dataset1.mp4,CAM4,5630.0,,0.0,True,0,667,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0009825000ms.jpg,CAM4_Dataset1.mp4,CAM4,9825.0,,0.0,True,0,668,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0009855000ms.jpg,CAM4_Dataset1.mp4,CAM4,9855.0,,0.0,True,0,669,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0009870000ms.jpg,CAM4_Dataset1.mp4,CAM4,9870.0,,0.0,True,0,670,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011150000ms.jpg,CAM4_Dataset1.mp4,CAM4,11150.0,,0.0,True,0,671,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011165000ms.jpg,CAM4_Dataset1.mp4,CAM4,11165.0,,0.0,True,0,672,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011195000ms.jpg,CAM4_Dataset1.mp4,CAM4,11195.0,,0.0,True,0,673,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011225000ms.jpg,CAM4_Dataset1.mp4,CAM4,11225.0,,0.0,True,0,674,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011240000ms.jpg,CAM4_Dataset1.mp4,CAM4,11240.0,,0.0,True,0,675,Standing
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011320000ms.jpg,CAM4_Dataset1.mp4,CAM4,11320.0,,0.0,True,0,676,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011335000ms.jpg,CAM4_Dataset1.mp4,CAM4,11335.0,,0.0,True,0,677,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011365000ms.jpg,CAM4_Dataset1.mp4,CAM4,11365.0,,0.0,True,0,678,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011380000ms.jpg,CAM4_Dataset1.mp4,CAM4,11380.0,,0.0,True,0,679,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011445000ms.jpg,CAM4_Dataset1.mp4,CAM4,11445.0,,0.0,True,0,680,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011475000ms.jpg,CAM4_Dataset1.mp4,CAM4,11475.0,,0.0,True,0,681,Drinking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011480000ms.jpg,CAM4_Dataset1.mp4,CAM4,11480.0,,0.0,True,0,682,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011495000ms.jpg,CAM4_Dataset1.mp4,CAM4,11495.0,,0.0,True,0,683,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011525000ms.jpg,CAM4_Dataset1.mp4,CAM4,11525.0,,0.0,True,0,684,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0011540000ms.jpg,CAM4_Dataset1.mp4,CAM4,11540.0,,0.0,True,0,685,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012830000ms.jpg,CAM4_Dataset1.mp4,CAM4,12830.0,,0.0,True,0,686,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012845000ms.jpg,CAM4_Dataset1.mp4,CAM4,12845.0,,0.0,True,0,687,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012875000ms.jpg,CAM4_Dataset1.mp4,CAM4,12875.0,,0.0,True,0,688,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0012890000ms.jpg,CAM4_Dataset1.mp4,CAM4,12890.0,,0.0,True,0,689,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0013815000ms.jpg,CAM4_Dataset1.mp4,CAM4,13815.0,,0.0,True,0,690,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0013845000ms.jpg,CAM4_Dataset1.mp4,CAM4,13845.0,,0.0,True,0,691,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014390000ms.jpg,CAM4_Dataset1.mp4,CAM4,14390.0,,0.0,True,0,692,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014405000ms.jpg,CAM4_Dataset1.mp4,CAM4,14405.0,,0.0,True,0,693,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014435000ms.jpg,CAM4_Dataset1.mp4,CAM4,14435.0,,0.0,True,0,694,Walking
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014450000ms.jpg,CAM4_Dataset1.mp4,CAM4,14450.0,,0.0,True,0,695,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014745000ms.jpg,CAM4_Dataset1.mp4,CAM4,14745.0,,0.0,True,0,696,No Civet
+data/scan_candidates/CAM4_Dataset1/CAM4_Dataset1_0014775000ms.jpg,CAM4_Dataset1.mp4,CAM4,14775.0,,0.0,True,0,697,Resting
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0007045000ms.jpg,CAM4_Dataset3.mp4,CAM4,7045.0,,0.0,True,0,698,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0007075000ms.jpg,CAM4_Dataset3.mp4,CAM4,7075.0,,0.0,True,0,699,No Civet
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0013905000ms.jpg,CAM4_Dataset3.mp4,CAM4,13905.0,,0.0,True,0,700,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0013935000ms.jpg,CAM4_Dataset3.mp4,CAM4,13935.0,,0.0,True,0,701,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0013950000ms.jpg,CAM4_Dataset3.mp4,CAM4,13950.0,,0.0,True,0,702,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0014920000ms.jpg,CAM4_Dataset3.mp4,CAM4,14920.0,,0.0,True,0,703,No Civet
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0014935000ms.jpg,CAM4_Dataset3.mp4,CAM4,14935.0,,0.0,True,0,704,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0014965000ms.jpg,CAM4_Dataset3.mp4,CAM4,14965.0,,0.0,True,0,705,Drinking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0014980000ms.jpg,CAM4_Dataset3.mp4,CAM4,14980.0,,0.0,True,0,706,No Civet
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0016400000ms.jpg,CAM4_Dataset3.mp4,CAM4,16400.0,,0.0,True,0,707,No Civet
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0016415000ms.jpg,CAM4_Dataset3.mp4,CAM4,16415.0,,0.0,True,0,708,No Civet
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0016445000ms.jpg,CAM4_Dataset3.mp4,CAM4,16445.0,,0.0,True,0,709,Walking
+data/scan_candidates/CAM4_Dataset3/CAM4_Dataset3_0016460000ms.jpg,CAM4_Dataset3.mp4,CAM4,16460.0,,0.0,True,0,710,Walking
