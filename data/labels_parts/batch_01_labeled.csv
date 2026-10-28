@@ -1,0 +1,11 @@
+row_id,image_path,label
+0,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003220000ms.jpg,Walking
+1,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003300000ms.jpg,Walking
+2,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003500000ms.jpg,Walking
+3,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003810000ms.jpg,Walking
+4,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004160000ms.jpg,Walking
+5,data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004190000ms.jpg,Walking
+6,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002170000ms.jpg,Standing
+7,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004760000ms.jpg,Eating
+8,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005020000ms.jpg,Walking
+9,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0005090000ms.jpg,Walking

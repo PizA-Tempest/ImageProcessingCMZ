@@ -1,0 +1,49 @@
+row_id,image_path,label
+425,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002155000ms.jpg,No Civet
+426,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002185000ms.jpg,Walking
+427,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004730000ms.jpg,No Civet
+428,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004745000ms.jpg,No Civet
+429,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004775000ms.jpg,No Civet
+430,data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0004790000ms.jpg,No Civet
+431,data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0000195000ms.jpg,No Civet
+432,data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0000225000ms.jpg,No Civet
+433,data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0014525000ms.jpg,No Civet
+434,data/scan_candidates/CAM1_Dataset3/CAM1_Dataset3_0014555000ms.jpg,Walking
+435,data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0011975000ms.jpg,Standing
+436,data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012005000ms.jpg,Standing
+437,data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012295000ms.jpg,Walking
+438,data/scan_candidates/CAM2_Dataset1/CAM2_Dataset1_0012325000ms.jpg,Walking
+439,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003095000ms.jpg,Eating
+440,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003125000ms.jpg,Eating
+441,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003140000ms.jpg,Walking
+442,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003180000ms.jpg,No Civet
+443,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003195000ms.jpg,No Civet
+444,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003225000ms.jpg,No Civet
+445,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003240000ms.jpg,No Civet
+446,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003290000ms.jpg,Walking
+447,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003305000ms.jpg,No Civet
+448,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003335000ms.jpg,No Civet
+449,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0003350000ms.jpg,No Civet
+450,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004210000ms.jpg,Walking
+451,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004225000ms.jpg,Walking
+452,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004255000ms.jpg,No Civet
+453,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004270000ms.jpg,No Civet
+454,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004260000ms.jpg,No Civet
+455,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004275000ms.jpg,No Civet
+456,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004305000ms.jpg,Walking
+457,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004320000ms.jpg,No Civet
+458,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004575000ms.jpg,Eating
+459,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004605000ms.jpg,Walking
+460,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0004620000ms.jpg,No Civet
+461,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005375000ms.jpg,Grooming
+462,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005405000ms.jpg,Grooming
+463,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005435000ms.jpg,Walking
+464,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005470000ms.jpg,Walking
+465,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005485000ms.jpg,Walking
+466,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005515000ms.jpg,Eating
+467,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005680000ms.jpg,Eating
+468,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005695000ms.jpg,Walking
+469,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005725000ms.jpg,No Civet
+470,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0005740000ms.jpg,No Civet
+471,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0009740000ms.jpg,No Civet
+472,data/scan_candidates/CAM3_Dataset1/CAM3_Dataset1_0009755000ms.jpg,Eating
