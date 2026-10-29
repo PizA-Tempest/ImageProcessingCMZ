@@ -89,26 +89,34 @@ def pick_val_videos(train_pool, classes, n_val_videos, seed, test_part):
         best=((0,0,0), train, val)
     return best[1], best[2]
 
-def build_model(n_classes, device):
+def build_model(n_classes, device, arch='b0'):
     try:
-        model=models.efficientnet_b0(weights=models.EfficientNet_B0_Weights.DEFAULT)
+        if arch=='b2':
+            model=models.efficientnet_b2(weights=models.EfficientNet_B2_Weights.DEFAULT)
+        else:
+            model=models.efficientnet_b0(weights=models.EfficientNet_B0_Weights.DEFAULT)
     except Exception as e:
-        print('Could not load pretrained weights:',e); model=models.efficientnet_b0(weights=None)
+        print('Could not load pretrained weights:',e)
+        model=models.efficientnet_b2(weights=None) if arch=='b2' else models.efficientnet_b0(weights=None)
     model.classifier[1]=nn.Linear(model.classifier[1].in_features,n_classes)
     for param in model.features.parameters(): param.requires_grad=False
     return model.to(device)
 
-def train_fold(train, val, classes, args, bbox_map, device, tag=''):
-    class_to_idx={c:i for i,c in enumerate(classes)}
-    tf_train=transforms.Compose([transforms.Resize((224,224)),transforms.RandomHorizontalFlip(),
+def make_transforms(image_size):
+    tf_train=transforms.Compose([transforms.Resize((image_size,image_size)),transforms.RandomHorizontalFlip(),
         transforms.RandomRotation(15),transforms.RandomAffine(0,translate=(0.08,0.08)),
         transforms.ColorJitter(brightness=.2,contrast=.2,saturation=.1),
         transforms.ToTensor(),transforms.Normalize([.485,.456,.406],[.229,.224,.225])])
-    tf_eval=transforms.Compose([transforms.Resize((224,224)),transforms.ToTensor(),
+    tf_eval=transforms.Compose([transforms.Resize((image_size,image_size)),transforms.ToTensor(),
         transforms.Normalize([.485,.456,.406],[.229,.224,.225])])
+    return tf_train, tf_eval
+
+def train_fold(train, val, classes, args, bbox_map, device, tag=''):
+    class_to_idx={c:i for i,c in enumerate(classes)}
+    tf_train, tf_eval = make_transforms(args.image_size)
     train_loader=DataLoader(FrameDataset(train,class_to_idx,tf_train,bbox_map),batch_size=args.batch_size,shuffle=True,num_workers=0)
     val_loader=DataLoader(FrameDataset(val,class_to_idx,tf_eval,bbox_map),batch_size=args.batch_size,shuffle=False,num_workers=0)
-    model=build_model(len(classes), device)
+    model=build_model(len(classes), device, args.arch)
     cnt=train.label.value_counts()
     if args.weight_mode=='none':
         lw=pd.Series(1.0, index=classes)
@@ -119,11 +127,14 @@ def train_fold(train, val, classes, args, bbox_map, device, tag=''):
     print(f'  {tag} class weights ({args.weight_mode}):', {c: round(float(lw[c]),2) for c in classes})
     criterion=nn.CrossEntropyLoss(weight=torch.tensor(lw.values,dtype=torch.float32).to(device),label_smoothing=0.1)
     optimizer=torch.optim.AdamW(filter(lambda x:x.requires_grad,model.parameters()),lr=1e-3,weight_decay=0.01)
+    scheduler=None
     unfreeze_after=3; unfrozen=False; best=-1.0; best_loss=float('inf'); best_state=None; history=[]
     for epoch in range(args.epochs):
         if epoch==unfreeze_after and not unfrozen:
             for param in model.features.parameters(): param.requires_grad=True
             optimizer=torch.optim.AdamW(model.parameters(),lr=1e-4,weight_decay=0.01)
+            if args.schedule=='cosine':
+                scheduler=torch.optim.lr_scheduler.CosineAnnealingLR(optimizer,T_max=args.epochs-unfreeze_after,eta_min=1e-6)
             unfrozen=True
         model.train(); train_loss=0
         for x,y in train_loader:
@@ -135,6 +146,7 @@ def train_fold(train, val, classes, args, bbox_map, device, tag=''):
                 x,y=x.to(device),y.to(device); logits=model(x); val_loss+=criterion(logits,y).item()*len(y)
                 vy.extend(y.cpu().numpy().tolist()); vyp.extend(logits.argmax(1).cpu().numpy().tolist())
         train_loss/=max(1,len(train_loader.dataset)); val_loss/=max(1,len(val_loader.dataset))
+        if scheduler is not None: scheduler.step()
         val_f1=f1_score(vy,vyp,labels=list(range(len(classes))),average='macro',zero_division=0)
         history.append({'epoch':epoch+1,'train_loss':train_loss,'val_loss':val_loss,'val_macro_f1':val_f1})
         if val_f1>best or (val_f1==best and val_loss<best_loss):
@@ -147,8 +159,7 @@ def train_fold(train, val, classes, args, bbox_map, device, tag=''):
 
 def predict_fold(model, test, classes, bbox_map, args):
     class_to_idx={c:i for i,c in enumerate(classes)}
-    tf_eval=transforms.Compose([transforms.Resize((224,224)),transforms.ToTensor(),
-        transforms.Normalize([.485,.456,.406],[.229,.224,.225])])
+    _, tf_eval = make_transforms(args.image_size)
     loader=DataLoader(FrameDataset(test,class_to_idx,tf_eval,bbox_map),batch_size=args.batch_size,shuffle=False,num_workers=0)
     model.eval(); y_true=[]; y_pred=[]
     with torch.no_grad():
@@ -170,6 +181,10 @@ def main():
     p.add_argument('--model-out',default='models/behavior_classifier.pt')
     p.add_argument('--results-dir',default='results')
     p.add_argument('--weight-mode',choices=['balanced','sqrt','none'],default='sqrt',help='class weight scheme')
+    p.add_argument('--arch',choices=['b0','b2'],default='b0',help='backbone architecture')
+    p.add_argument('--image-size',type=int,default=224,help='input resolution')
+    p.add_argument('--schedule',choices=['fixed','cosine'],default='cosine',help='lr schedule after unfreeze')
+    p.add_argument('--merge-rare',action='store_true',help='merge Grooming/Other/Resting/Running into Other')
     p.add_argument('--verbose',action='store_true')
     args=p.parse_args()
     random.seed(args.seed); np.random.seed(args.seed); torch.manual_seed(args.seed)
@@ -180,6 +195,10 @@ def main():
     if not required.issubset(df.columns): raise SystemExit(f'CSV must contain {sorted(required)}')
     EXCLUDE={'Unclear','Not Visible','No Civet',''}
     df=df[~df.label.astype(str).str.strip().isin(EXCLUDE)].copy()
+    if args.merge_rare:
+        for rare in ['Grooming','Resting','Running']:
+            df.loc[df.label==rare,'label']='Other'
+        print('Merged Grooming/Resting/Running -> Other')
     df=df[df.image_path.map(lambda x: Path(x).exists())]
     if len(df)<20: raise SystemExit('Need at least 20 labeled, readable images.')
     counts=df.label.value_counts(); classes=sorted(counts[counts>=3].index.tolist()); df=df[df.label.isin(classes)].reset_index(drop=True)
@@ -187,7 +206,7 @@ def main():
     bbox_map=load_bbox_map(Path(args.annotations).parent/'bboxes.csv')
     n_crop=int(df.image_path.isin(bbox_map).sum())
     print(f'Classes ({len(classes)}): {classes}')
-    print(f'Labeled frames: {len(df)} | cropping to YOLO box: {n_crop}/{len(df)}')
+    print(f'Labeled frames: {len(df)} | cropping to YOLO box: {n_crop}/{len(df)} | arch={args.arch} size={args.image_size}')
 
     videos=df.source_video.unique().tolist()
     n_folds=max(1, min(args.cv_folds, len(videos)))
@@ -251,7 +270,7 @@ def main():
 
     out=Path(args.results_dir); out.mkdir(parents=True, exist_ok=True); Path(args.model_out).parent.mkdir(parents=True, exist_ok=True)
     if best_model_state is not None:
-        torch.save({'state_dict':best_model_state,'classes':classes,'image_size':224,'crop_to_bbox':bool(bbox_map)},args.model_out)
+        torch.save({'state_dict':best_model_state,'classes':classes,'image_size':args.image_size,'arch':args.arch,'crop_to_bbox':bool(bbox_map)},args.model_out)
     metrics={'cv_folds':len(fold_results),'test_accuracy':mean_acc,'test_accuracy_std':std_acc,
              'test_macro_f1':mean_f1,'test_macro_f1_std':std_f1,
              'pooled_accuracy':pooled_acc,'pooled_macro_f1':pooled_macro,

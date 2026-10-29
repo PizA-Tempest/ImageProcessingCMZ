@@ -13,11 +13,12 @@ ROOMS = {'CAM1': 'Room 1', 'CAM2': 'Room 2', 'CAM3': 'Room 3', 'CAM4': 'Room 4'}
 def load_behavior_model(ckpt_path, device):
     ckpt = torch.load(ckpt_path, map_location='cpu', weights_only=False)
     classes = ckpt['classes']
-    model = models.efficientnet_b0(weights=None)
+    arch = ckpt.get('arch', 'b0')
+    model = models.efficientnet_b2(weights=None) if arch == 'b2' else models.efficientnet_b0(weights=None)
     model.classifier[1] = nn.Linear(model.classifier[1].in_features, len(classes))
     model.load_state_dict(ckpt['state_dict'])
     model.to(device).eval()
-    return model, classes, bool(ckpt.get('crop_to_bbox', False))
+    return model, classes, bool(ckpt.get('crop_to_bbox', False)), int(ckpt.get('image_size', 224))
 
 
 def crop_bbox(frame, xyxy, pad=0.15):
@@ -85,10 +86,10 @@ def main():
         raise SystemExit('Model missing. Run train.py first.')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print('Device:', device)
-    clf, classes, do_crop = load_behavior_model(ckpt_path, device)
-    print(f'Crop to detection box: {do_crop}')
+    clf, classes, do_crop, img_size = load_behavior_model(ckpt_path, device)
+    print(f'Crop to detection box: {do_crop} | input size: {img_size}')
     yolo = YOLO('yolov8n.pt')
-    tf = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor(),
+    tf = transforms.Compose([transforms.Resize((img_size, img_size)), transforms.ToTensor(),
                              transforms.Normalize([.485, .456, .406], [.229, .224, .225])])
 
     if args.all:
