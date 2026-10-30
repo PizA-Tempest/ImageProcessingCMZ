@@ -4,7 +4,7 @@ data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003300000ms.jpg,CAM1_Dataset1.
 data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003500000ms.jpg,CAM1_Dataset1.mp4,CAM1,3500.0,bird,0.571,True,1,2,Walking
 data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0003810000ms.jpg,CAM1_Dataset1.mp4,CAM1,3810.0,bird,0.78,True,1,3,Walking
 data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004160000ms.jpg,CAM1_Dataset1.mp4,CAM1,4160.0,bird,0.815,True,2,4,Walking
-data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004190000ms.jpg,CAM1_Dataset1.mp4,CAM1,4190.0,bird,0.384,True,3,5,Standing
+data/scan_candidates/CAM1_Dataset1/CAM1_Dataset1_0004190000ms.jpg,CAM1_Dataset1.mp4,CAM1,4190.0,bird,0.384,True,3,5,Resting
 data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002155000ms.jpg,CAM1_Dataset2.mp4,CAM1,2155.0,,0.0,True,0,425,No Civet
 data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002170000ms.jpg,CAM1_Dataset2.mp4,CAM1,2170.0,bird,0.273,True,3,6,Standing
 data/scan_candidates/CAM1_Dataset2/CAM1_Dataset2_0002185000ms.jpg,CAM1_Dataset2.mp4,CAM1,2185.0,,0.0,True,0,426,Walking

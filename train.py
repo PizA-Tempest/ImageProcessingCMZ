@@ -126,13 +126,13 @@ def train_fold(train, val, classes, args, bbox_map, device, tag=''):
         lw=(cnt.sum()/(len(classes)*cnt)).reindex(classes).fillna(1.0).clip(upper=8.0)
     print(f'  {tag} class weights ({args.weight_mode}):', {c: round(float(lw[c]),2) for c in classes})
     criterion=nn.CrossEntropyLoss(weight=torch.tensor(lw.values,dtype=torch.float32).to(device),label_smoothing=0.1)
-    optimizer=torch.optim.AdamW(filter(lambda x:x.requires_grad,model.parameters()),lr=1e-3,weight_decay=0.01)
+    optimizer=torch.optim.AdamW(filter(lambda x:x.requires_grad,model.parameters()),lr=args.lr_head,weight_decay=0.01)
     scheduler=None
     unfreeze_after=3; unfrozen=False; best=-1.0; best_loss=float('inf'); best_state=None; history=[]
     for epoch in range(args.epochs):
         if epoch==unfreeze_after and not unfrozen:
             for param in model.features.parameters(): param.requires_grad=True
-            optimizer=torch.optim.AdamW(model.parameters(),lr=1e-4,weight_decay=0.01)
+            optimizer=torch.optim.AdamW(model.parameters(),lr=args.lr_backbone,weight_decay=0.01)
             if args.schedule=='cosine':
                 scheduler=torch.optim.lr_scheduler.CosineAnnealingLR(optimizer,T_max=args.epochs-unfreeze_after,eta_min=1e-6)
             unfrozen=True
@@ -148,12 +148,14 @@ def train_fold(train, val, classes, args, bbox_map, device, tag=''):
         train_loss/=max(1,len(train_loader.dataset)); val_loss/=max(1,len(val_loader.dataset))
         if scheduler is not None: scheduler.step()
         val_f1=f1_score(vy,vyp,labels=list(range(len(classes))),average='macro',zero_division=0)
-        history.append({'epoch':epoch+1,'train_loss':train_loss,'val_loss':val_loss,'val_macro_f1':val_f1})
-        if val_f1>best or (val_f1==best and val_loss<best_loss):
-            best=val_f1; best_loss=val_loss
+        val_acc=(np.array(vy)==np.array(vyp)).mean() if vy else 0.0
+        sel=val_f1 if args.select_by=='f1' else val_acc
+        history.append({'epoch':epoch+1,'train_loss':train_loss,'val_loss':val_loss,'val_macro_f1':val_f1,'val_acc':val_acc})
+        if sel>best or (sel==best and val_loss<best_loss):
+            best=sel; best_loss=val_loss
             best_state={k:v.detach().cpu().clone() for k,v in model.state_dict().items()}
         if args.verbose or epoch in (0, args.epochs-1):
-            print(f'  {tag}epoch {epoch+1}/{args.epochs}: train_loss={train_loss:.4f} val_loss={val_loss:.4f} val_macro_f1={val_f1:.4f}')
+            print(f'  {tag}epoch {epoch+1}/{args.epochs}: train_loss={train_loss:.4f} val_loss={val_loss:.4f} val_f1={val_f1:.4f} val_acc={val_acc:.4f}')
     if best_state: model.load_state_dict(best_state)
     return model, history, best
 
@@ -184,6 +186,9 @@ def main():
     p.add_argument('--arch',choices=['b0','b2'],default='b0',help='backbone architecture')
     p.add_argument('--image-size',type=int,default=224,help='input resolution')
     p.add_argument('--schedule',choices=['fixed','cosine'],default='cosine',help='lr schedule after unfreeze')
+    p.add_argument('--select-by',choices=['f1','accuracy'],default='f1',help='epoch selection metric on val split')
+    p.add_argument('--lr-head',type=float,default=1e-3,help='lr during head-only phase')
+    p.add_argument('--lr-backbone',type=float,default=1e-4,help='lr after backbone unfreeze')
     p.add_argument('--merge-rare',action='store_true',help='merge Grooming/Other/Resting/Running into Other')
     p.add_argument('--verbose',action='store_true')
     args=p.parse_args()
