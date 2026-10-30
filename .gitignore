@@ -11,9 +11,13 @@ st_log.txt
 
 # Large regenerable media (not pushed to GitHub)
 data/videos/*
-data/frames/*
-data/frames_civet/*
-data/scan_candidates/*
+data/frames.zip
+civet-monitor/
+
+# Experiment leftovers
+models/r*.pt
+results_r*/
+*.err
 
 # YOLO weights (auto-downloaded by ultralytics on first run)
 yolov8n.pt
