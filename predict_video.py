@@ -30,7 +30,7 @@ def crop_bbox(frame, xyxy, pad=0.15):
     return crop if crop.size > 0 else frame
 
 
-def process_video(cap_path, camera, room, every_s, device, yolo, clf, classes, tf, do_crop=False, conf_gate=0.10):
+def process_video(cap_path, camera, room, every_s, device, gate, yolo, clf, classes, tf, do_crop=False, conf_gate=0.25):
     cap = cv2.VideoCapture(str(cap_path))
     if not cap.isOpened():
         raise SystemExit(f'Cannot open video: {cap_path}')
@@ -43,12 +43,18 @@ def process_video(cap_path, camera, room, every_s, device, yolo, clf, classes, t
         if not ok:
             break
         sec = idx / fps
-        det = yolo.predict(frame, conf=conf_gate, classes=list(ANIMAL_CLASSES),
+        # presence gate: friend's fine-tuned civet detector (97.5% accuracy on our labeled frames)
+        g = gate.predict(frame, conf=conf_gate, imgsz=640, verbose=False, device=device)[0]
+        # crop box: COCO animals (same source the classifier was trained on)
+        det = yolo.predict(frame, conf=0.10, classes=list(ANIMAL_CLASSES),
                            imgsz=1280, verbose=False, device=device)[0]
-        if len(det.boxes):
-            best = det.boxes[int(det.boxes.conf.argmax())]
-            yolo_conf = float(best.conf[0])
-            region = crop_bbox(frame, best.xyxy[0].cpu().numpy()) if do_crop else frame
+        if len(g.boxes):
+            yolo_conf = float(g.boxes.conf.max())
+            if len(det.boxes):
+                best = det.boxes[int(det.boxes.conf.argmax())]
+                region = crop_bbox(frame, best.xyxy[0].cpu().numpy()) if do_crop else frame
+            else:
+                region = frame  # trained on full-frame fallback when no box
             rgb = cv2.cvtColor(region, cv2.COLOR_BGR2RGB)
             x = tf(Image.fromarray(rgb)).unsqueeze(0).to(device)
             with torch.no_grad():
@@ -77,7 +83,7 @@ def main():
     p.add_argument('--camera', default='CAM1')
     p.add_argument('--room', default=None)
     p.add_argument('--every-seconds', type=float, default=5)
-    p.add_argument('--conf', type=float, default=0.10, help='YOLO civet confidence gate (matches extract_bboxes.py)')
+    p.add_argument('--conf', type=float, default=0.25, help='civet_yolo26n presence gate confidence')
     p.add_argument('--output', default='results/predictions.csv')
     args = p.parse_args()
 
@@ -88,7 +94,8 @@ def main():
     print('Device:', device)
     clf, classes, do_crop, img_size = load_behavior_model(ckpt_path, device)
     print(f'Crop to detection box: {do_crop} | input size: {img_size}')
-    yolo = YOLO('yolov8n.pt')
+    gate = YOLO('civet-monitor/models/civet_yolo26n.pt')   # friend's fine-tuned detector: presence gate
+    yolo = YOLO('yolov8n.pt')                              # COCO: crop boxes (training distribution)
     tf = transforms.Compose([transforms.Resize((img_size, img_size)), transforms.ToTensor(),
                              transforms.Normalize([.485, .456, .406], [.229, .224, .225])])
 
@@ -105,7 +112,7 @@ def main():
     all_rows, start = [], time.perf_counter()
     for vp, cam, room in jobs:
         print(f'Processing {vp.name} ({cam})...')
-        rows = process_video(vp, cam, room, args.every_seconds, device, yolo, clf, classes, tf, do_crop, args.conf)
+        rows = process_video(vp, cam, room, args.every_seconds, device, gate, yolo, clf, classes, tf, do_crop, args.conf)
         n_active = sum(r['civet_detected'] for r in rows)
         print(f'  {len(rows)} frames sampled, civet in {n_active} ({100*n_active/max(1,len(rows)):.1f}%)')
         all_rows.extend(rows)
