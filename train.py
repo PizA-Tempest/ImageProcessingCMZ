@@ -190,7 +190,7 @@ def main():
     p.add_argument('--lr-head',type=float,default=1e-3,help='lr during head-only phase')
     p.add_argument('--lr-backbone',type=float,default=1e-4,help='lr after backbone unfreeze')
     p.add_argument('--merge-rare',action='store_true',help='merge Grooming/Other/Resting/Running into Other')
-    p.add_argument('--min-count',type=int,default=3,help='minimum frames for a class to be trained')
+    p.add_argument('--min-count',type=int,default=4,help='minimum frames for a class to be trained')
     p.add_argument('--verbose',action='store_true')
     args=p.parse_args()
     random.seed(args.seed); np.random.seed(args.seed); torch.manual_seed(args.seed)
