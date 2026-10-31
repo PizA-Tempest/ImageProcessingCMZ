@@ -16,7 +16,9 @@ civet-monitor/
 
 # Experiment leftovers
 models/r*.pt
+models/try*.pt
 results_r*/
+results_try*/
 *.err
 
 # YOLO weights (auto-downloaded by ultralytics on first run)

@@ -8,10 +8,10 @@ a fine-tuned EfficientNet-B0, and presents results in Streamlit dashboards.
 
 | Metric | Value |
 |---|---|
-| Labeled frames | 711 (592 behavior-labeled + 119 "No Civet"; 590 used for training) |
-| CV accuracy (unseen videos) | **68.4% ± 3.3** |
-| CV macro F1 | 0.200 ± 0.067 (pooled out-of-fold: **0.251**) |
-| Walking precision / recall | 0.79 / 0.85 (pooled) |
+| Labeled frames | 711 (592 behavior-labeled + 119 "No Civet"; 587 used for training) |
+| CV accuracy (unseen videos) | **69.0% ± 5.1** |
+| CV macro F1 | 0.248 ± 0.065 (pooled out-of-fold: **0.303**) |
+| Walking precision / recall | 0.78 / 0.85 (pooled) |
 | Presence gate accuracy | **97.5%** (friend's civet_yolo26n; old COCO gate: 83.3%) |
 | Predictions generated | 39,932 frames (every 5s across all 12 videos) |
 | Civet present | 15.5% of sampled frames (CAM4_Dataset1 26% → CAM1_Dataset2 1.4%; CAM4_Dataset2 0%) |
@@ -19,7 +19,7 @@ a fine-tuned EfficientNet-B0, and presents results in Streamlit dashboards.
 
 Evaluation protocol: every video is used as test set exactly once (group CV by source video);
 the classifier never trains on frames from a video it is tested on. Reported metrics are pooled
-out-of-fold predictions over all 590 training frames. These metrics are on the human-corrected
+out-of-fold predictions over all 587 training frames. These metrics are on the human-corrected
 labels (6 frames were relabeled to harder classes; the earlier 73% score was on pre-correction labels).
 
 ## Architecture
@@ -90,18 +90,19 @@ streamlit run dashboard.py
 Walking 421 · No Civet 119 · Eating 89 · Drinking 47 · Standing 16 · Grooming 7 · Other 7 ·
 Running 2 · Resting 3.
 
-Classes with <3 frames are excluded from training (Running, 2); Resting (3) is included but too thin
-to generalize (its CV F1 is 0). Grooming/Other remain thin (7–8 examples).
+Classes with <4 frames are excluded from training (Running 2, Resting 3 — Resting had CV F1 0 and
+cost ~2 points of macro F1 while it was included). Grooming (7) and Other (7–8) remain thin.
 
 ## Limitations (state these in the presentation)
 
 1. **Still images cannot perfectly separate Walking vs Standing** — motion cues need video
    (temporal models: LSTM/transformer over frame sequences are the natural next step).
-2. **Rare classes are thin**: Resting (3), Grooming (7), Other (7), Standing (16) — collect more
-   examples by labeling dense clips around known events (`extract_neighbors.py`).
-3. **Cross-video generalization is the honest metric**: accuracy on an unseen video is 68%,
+2. **Rare classes are thin**: Grooming (7), Other (7), Standing (16), Drinking (47) — collect more
+   examples by labeling dense clips around known events (`extract_neighbors.py`); Resting (3) and
+   Running (2) are too thin to train at all.
+3. **Cross-video generalization is the honest metric**: accuracy on an unseen video is 69%,
    lower than a random frame split would suggest (which would leak between adjacent frames).
-   After the human label corrections this is 5pp below the pre-correction score — corrections
+   After the human label corrections this is below the pre-correction score — corrections
    moved frames into harder, visually similar classes.
    lower than a random frame split would suggest (which would leak between adjacent frames).
 4. YOLO rarely classifies the civet correctly (mostly "bird"); the gate accepts any COCO
