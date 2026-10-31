@@ -190,6 +190,7 @@ def main():
     p.add_argument('--lr-head',type=float,default=1e-3,help='lr during head-only phase')
     p.add_argument('--lr-backbone',type=float,default=1e-4,help='lr after backbone unfreeze')
     p.add_argument('--merge-rare',action='store_true',help='merge Grooming/Other/Resting/Running into Other')
+    p.add_argument('--min-count',type=int,default=3,help='minimum frames for a class to be trained')
     p.add_argument('--verbose',action='store_true')
     args=p.parse_args()
     random.seed(args.seed); np.random.seed(args.seed); torch.manual_seed(args.seed)
@@ -206,7 +207,7 @@ def main():
         print('Merged Grooming/Resting/Running -> Other')
     df=df[df.image_path.map(lambda x: Path(x).exists())]
     if len(df)<20: raise SystemExit('Need at least 20 labeled, readable images.')
-    counts=df.label.value_counts(); classes=sorted(counts[counts>=3].index.tolist()); df=df[df.label.isin(classes)].reset_index(drop=True)
+    counts=df.label.value_counts(); classes=sorted(counts[counts>=args.min_count].index.tolist()); df=df[df.label.isin(classes)].reset_index(drop=True)
     if len(classes)<2: raise SystemExit('Need at least 2 behavior classes with 3+ images each.')
     bbox_map=load_bbox_map(Path(args.annotations).parent/'bboxes.csv')
     n_crop=int(df.image_path.isin(bbox_map).sum())

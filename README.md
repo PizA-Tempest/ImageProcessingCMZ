@@ -8,17 +8,19 @@ a fine-tuned EfficientNet-B0, and presents results in Streamlit dashboards.
 
 | Metric | Value |
 |---|---|
-| Labeled frames | 711 (592 behavior-labeled + 119 "No Civet"; 588 used for training) |
-| CV accuracy (unseen videos) | **73.4% ± 3.2** |
-| CV macro F1 | 0.280 ± 0.090 (pooled out-of-fold: **0.378**) |
-| Walking precision / recall | 0.79 / 0.87 (pooled) |
+| Labeled frames | 711 (592 behavior-labeled + 119 "No Civet"; 590 used for training) |
+| CV accuracy (unseen videos) | **68.4% ± 3.3** |
+| CV macro F1 | 0.200 ± 0.067 (pooled out-of-fold: **0.251**) |
+| Walking precision / recall | 0.79 / 0.85 (pooled) |
+| Presence gate accuracy | **97.5%** (friend's civet_yolo26n; old COCO gate: 83.3%) |
 | Predictions generated | 39,932 frames (every 5s across all 12 videos) |
-| Civet present | 13.9% of sampled frames (CAM2 26% → CAM4 5%) |
-| Inference speed | ~33 ms/frame (RTX 5060 Ti: YOLO 1280 + classifier crop) |
+| Civet present | 15.5% of sampled frames (CAM4_Dataset1 26% → CAM1_Dataset2 1.4%; CAM4_Dataset2 0%) |
+| Inference speed | ~114 ms/frame (gate 640 + crop detector 1280, RTX 5060 Ti) |
 
 Evaluation protocol: every video is used as test set exactly once (group CV by source video);
 the classifier never trains on frames from a video it is tested on. Reported metrics are pooled
-out-of-fold predictions over all 588 training frames.
+out-of-fold predictions over all 590 training frames. These metrics are on the human-corrected
+labels (6 frames were relabeled to harder classes; the earlier 73% score was on pre-correction labels).
 
 ## Architecture
 
@@ -29,8 +31,10 @@ annotations + bboxes ──train.py──► behavior_classifier.pt + results/me
 videos ──predict_video.py --all──► results/predictions.csv ──dashboard.py──► monitoring UI
 ```
 
-- **Detection**: YOLOv8n, COCO animal classes, conf ≥ 0.10 at imgsz 1280 (the civet is often
-  misclassified as "bird"/"cat" — any animal-class detection is treated as a civet presence gate).
+- **Detection**: presence gate = `civet-monitor/models/civet_yolo26n.pt`, a fine-tuned binary civet
+  detector (conf 0.25, imgsz 640) with **97.5% presence accuracy** on our labeled frames, versus 83.3%
+  for the old COCO "any animal class" gate. Crop boxes still come from YOLOv8n COCO — the same
+  distribution the classifier was trained on (friend's tight crops scored 5pp worse in CV).
 - **Classifier**: EfficientNet-B0 (ImageNet pretrained), trained on the padded YOLO box crop
   (falls back to full frame when no box was found). 2-phase training (head 3 epochs, then
   unfreeze backbone), cosine LR decay after unfreezing (+4pp accuracy over constant LR),
@@ -78,31 +82,41 @@ streamlit run dashboard.py
 | `predict_video.py` | YOLO gate + classifier over videos |
 | `annotate_app.py` | labeling UI |
 | `dashboard.py` | results dashboard |
+| `eval_gate.py` | presence-gate A/B evaluation on the labeled frames |
+| `civet-monitor/` | friend's full pipeline (local, git-ignored); only its detector is used |
 
 ## Dataset label distribution (711 frames)
 
-Walking 421 · No Civet 119 · Eating 89 · Drinking 47 · Standing 17 · Grooming 7 · Other 7 ·
-Running 2 · Resting 2.
+Walking 421 · No Civet 119 · Eating 89 · Drinking 47 · Standing 16 · Grooming 7 · Other 7 ·
+Running 2 · Resting 3.
 
-Classes with <3 frames (Running, Resting) are excluded from training; "No Civet" is handled by
-the detection gate. Grooming/Other remain thin (7 examples each) — their per-class metrics are noisy.
+Classes with <3 frames are excluded from training (Running, 2); Resting (3) is included but too thin
+to generalize (its CV F1 is 0). Grooming/Other remain thin (7–8 examples).
 
 ## Limitations (state these in the presentation)
 
 1. **Still images cannot perfectly separate Walking vs Standing** — motion cues need video
    (temporal models: LSTM/transformer over frame sequences are the natural next step).
-2. **Rare classes are thin**: Grooming (7), Other (7), Standing (17) — collect more examples by
-   labeling dense clips around known events (`extract_neighbors.py`).
-3. **Cross-video generalization is the honest metric**: accuracy on an unseen video is 73%,
+2. **Rare classes are thin**: Resting (3), Grooming (7), Other (7), Standing (16) — collect more
+   examples by labeling dense clips around known events (`extract_neighbors.py`).
+3. **Cross-video generalization is the honest metric**: accuracy on an unseen video is 68%,
+   lower than a random frame split would suggest (which would leak between adjacent frames).
+   After the human label corrections this is 5pp below the pre-correction score — corrections
+   moved frames into harder, visually similar classes.
    lower than a random frame split would suggest (which would leak between adjacent frames).
 4. YOLO rarely classifies the civet correctly (mostly "bird"); the gate accepts any COCO
    animal-class detection, which may rare-fire on non-civet animals outdoors.
 5. Predictions are frame-level estimates (5s sampling), not verified ethogram events.
+6. The friend's civet-monitor system claims 80% behaviour accuracy, but it scores 0.53 s *temporal
+   steps* from 5.3 s pose windows on one day (macro F1 0.48) — not directly comparable to our
+   per-frame video-split score. Its detector is integrated; integrating its temporal behaviour model
+   means running pose + tracking over full videos with an adapted zone config (next step).
 
 ## Deadline-ready checklist
 
 - [x] All 12 videos scanned; 425 + 286 frames labeled (agent-assisted, human-audited sample)
 - [x] Group-CV evaluation with confusion matrix + per-class report
-- [x] Full-corpus predictions (39,932 frames)
+- [x] Friend's civet detector adopted as presence gate (97.5% vs 83.3% COCO)
+- [x] Full-corpus predictions (39,932 frames, re-run with the new gate)
 - [x] Labeling UI + monitoring dashboard (dark theme, keys 1–9, gallery)
 - [ ] Presentation slides (use `results/metrics.json`, `results/confusion_matrix.png`, dashboard)
