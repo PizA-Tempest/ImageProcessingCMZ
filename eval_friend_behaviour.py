@@ -1,12 +1,12 @@
 """Evaluate the friend system's behaviour events against our 711 human labels.
 
-Joins civetwatch's behavior_event table (SQLite) with data/annotations.csv on
-simulated time: friend ts = file_start + timestamp_seconds (FileStepper now
-steps by container fps, so sim time == our scan time).
+Joins civetwatch's behavior_event table (one SQLite per video, single-camera
+sessions in civet-monitor/outputs/single/) with data/annotations.csv on
+simulated time: friend ts = file_start + timestamp_seconds (FileStepper steps
+by container fps, so sim time == our scan time).
 
 Usage:
-  python eval_friend_behaviour.py --datasets 1 2 3
-  python eval_friend_behaviour.py --datasets 1        # one session only
+  python eval_friend_behaviour.py
 """
 from __future__ import annotations
 
@@ -41,12 +41,12 @@ def load_events(db_path: Path):
         "FROM behavior_event ORDER BY timestamp_start"
     ).fetchall()
     con.close()
-    per_cam: dict[str, list[tuple[datetime, datetime, str, float]]] = {}
+    events = []
     for cam, beh, s, e, conf in rows:
-        per_cam.setdefault(cam, []).append(
+        events.append(
             (datetime.fromisoformat(s), datetime.fromisoformat(e), beh, conf or 0.0)
         )
-    return per_cam
+    return events
 
 
 def find_event(events, ts: datetime):
@@ -67,34 +67,32 @@ def find_event(events, ts: datetime):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--datasets", type=int, nargs="+", default=[1, 2, 3])
-    ap.add_argument("--db-dir", default="civet-monitor/outputs")
+    ap.add_argument("--db-dir", default="civet-monitor/outputs/single")
     ap.add_argument("--annotations", default="data/annotations.csv")
     ap.add_argument("--file-start", default="2026-04-05T00:00:00")
     ap.add_argument("--out", default="results/friend_eval.json")
     args = ap.parse_args()
 
     t0 = datetime.fromisoformat(args.file_start)
+    rows = list(csv.DictReader(open(args.annotations, encoding="utf-8-sig")))
+    videos = sorted({r["source_video"] for r in rows})
     sessions = {}
-    for d in args.datasets:
-        db = Path(args.db_dir) / f"our_dataset{d}.sqlite"
+    for video in videos:
+        db = Path(args.db_dir) / f"{video.replace('.mp4', '')}.sqlite"
         if not db.exists():
             print(f"skip missing db: {db}")
             continue
-        sessions[d] = load_events(db)
+        sessions[video] = load_events(db)
     if not sessions:
         raise SystemExit("no session databases found")
 
-    rows = list(csv.DictReader(open(args.annotations, encoding="utf-8-sig")))
     results, conf_mat = [], {}
     for r in rows:
         video = r["source_video"]
-        d = int(video.split("_Dataset")[1].split(".")[0])
-        if d not in sessions:
+        if video not in sessions:
             continue
         ts = t0 + timedelta(seconds=float(r["timestamp_seconds"]))
-        cam = "CAM%02d" % int(r["camera"].replace("CAM", ""))
-        events = sessions[d].get(cam, [])
+        events = sessions[video]
         beh, conf, side = find_event(events, ts)
         ours = r["label"]
         if beh is None:
@@ -103,7 +101,7 @@ def main():
         else:
             pred, matched = FRIEND_TO_OURS.get(beh, beh), True
         results.append({
-            "video": video, "camera": cam, "t": float(r["timestamp_seconds"]),
+            "video": video, "t": float(r["timestamp_seconds"]),
             "ours": ours, "friend_raw": beh or "", "friend": pred,
             "conf": conf or 0.0, "matched": matched, "side": side,
         })

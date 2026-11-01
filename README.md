@@ -43,6 +43,51 @@ videos ──predict_video.py --all──► results/predictions.csv ──dashb
 - **No detection → "Not Visible" / Idle**: the classifier only runs when the gate fires, so
   empty-enclosure frames are never classified.
 
+## Model selection (why EfficientNet-B0)
+
+We compared CNN backbones on the same 4-fold group-CV protocol (same crops, schedule, and
+augmentation; only the backbone/size changed):
+
+| Candidate | CV accuracy | Verdict |
+|---|---|---|
+| **EfficientNet-B0 @ 224** | **69.0%** (final config) | chosen — best accuracy/speed trade-off |
+| EfficientNet-B0 @ 320 | 65.3% | slower, no gain on 711 frames |
+| EfficientNet-B2 @ 260 | — | too slow for 4-camera streaming (~3× cost, no gain) |
+| YOLOv8n-cls (crop classifier) | 65.3% (merged-rare variant) | weaker; loses spatial context B0 keeps |
+
+EfficientNet-B0 gives ImageNet-pretrained features with only ~5.3 M parameters, runs at
+~100 ms/frame on the RTX 5060 Ti (real-time for 4 cameras at 5 s sampling), and its compound
+scaling handles our small 224×224 crops well. Larger backbones overfit 587 training frames;
+end-to-end detectors (YOLO classify head) were worse still. The system is two-stage because
+behaviour classification and presence detection have very different data needs: the gate needs
+cheap recall over empty frames (97.5%), the classifier needs fine-grained semantics on crops.
+
+## System output: active vs inactive (evaluation view)
+
+The dashboard's overview tab + this table answer "when was the civet active". "Active" =
+presence gate fired (civet detected in frame); behaviour is then classified per frame.
+Computed on `results/predictions.csv` (39,932 frames, one every 5 s across all 12 videos):
+
+| Video | Frames sampled | Civet present | Active % |
+|---|---|---|---|
+| CAM1_Dataset1.mp4 | 887 | 56 | 6.3% |
+| CAM1_Dataset2.mp4 | 2,626 | 37 | 1.4% |
+| CAM1_Dataset3.mp4 | 3,498 | 452 | 12.9% |
+| CAM2_Dataset1.mp4 | 4,266 | 484 | 11.3% |
+| CAM2_Dataset2.mp4 | 3,007 | 240 | 8.0% |
+| CAM2_Dataset3.mp4 | 4,511 | 543 | 12.0% |
+| CAM3_Dataset1.mp4 | 5,003 | 928 | 18.5% |
+| CAM3_Dataset2.mp4 | 3,056 | 720 | 23.6% |
+| CAM3_Dataset3.mp4 | 5,691 | 1,380 | 24.2% |
+| CAM4_Dataset1.mp4 | 3,095 | 812 | 26.2% |
+| CAM4_Dataset2.mp4 | 463 | 0 | **0.0% (enclosure empty all video)** |
+| CAM4_Dataset3.mp4 | 3,829 | 538 | 14.1% |
+| **All** | **39,932** | **6,190** | **15.5%** |
+
+Behaviour mix when civet present (pooled): Walking 75% · Eating 13% · Drinking 8% ·
+Standing 1.4% · Other 1.4% · Grooming 1.1%. CAM4_Dataset2 being 0% is a true negative —
+the enclosure was empty for that recording (hand-verified).
+
 ## Pipeline commands
 
 ```powershell
@@ -104,7 +149,6 @@ cost ~2 points of macro F1 while it was included). Grooming (7) and Other (7–8
    lower than a random frame split would suggest (which would leak between adjacent frames).
    After the human label corrections this is below the pre-correction score — corrections
    moved frames into harder, visually similar classes.
-   lower than a random frame split would suggest (which would leak between adjacent frames).
 4. YOLO rarely classifies the civet correctly (mostly "bird"); the gate accepts any COCO
    animal-class detection, which may rare-fire on non-civet animals outdoors.
 5. Predictions are frame-level estimates (5s sampling), not verified ethogram events.
@@ -112,6 +156,16 @@ cost ~2 points of macro F1 while it was included). Grooming (7) and Other (7–8
    steps* from 5.3 s pose windows on one day (macro F1 0.48) — not directly comparable to our
    per-frame video-split score. Its detector is integrated; integrating its temporal behaviour model
    means running pose + tracking over full videos with an adapted zone config (next step).
+
+## Links (assignment deliverables)
+
+- **Source code**: https://github.com/PizA-tempest/ImageProcessingCMZ
+- **Annotations (711 labeled frames)**: `data/annotations.csv` in the repo
+  (columns: source_video, camera, timestamp_seconds, label, bbox info) — images under `data/frames/`
+- **Trained model**: `models/behavior_classifier.pt` (EfficientNet-B0, 4-fold group CV 69.0%)
+- **CV metrics + confusion matrix**: `results/metrics.json`, `results/confusion_matrix.png`
+- **Full predictions**: `results/predictions.csv` (39,932 frames)
+- **Dashboards**: `streamlit run dashboard.py` (monitoring) · `streamlit run annotate_app.py` (labeling)
 
 ## Deadline-ready checklist
 

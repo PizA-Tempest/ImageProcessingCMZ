@@ -1,12 +1,14 @@
-"""Run the friend civetwatch pipeline over label-centred windows of our videos.
+"""Run the friend civetwatch pipeline per-video (single-camera sessions).
 
-Windows are rebuilt from data/annotations.csv (pad 120 s, merge gap 300 s) so
-every one of the 711 labels falls inside a processed window. Sessions run
-sequentially (shared GPU), one subprocess per window; outputs append to
-civet-monitor/outputs/our_dataset{N}.sqlite.
+Our 4 camera videos are NOT time-synchronised (different durations), so the
+multi-camera handoff thrashes. Each video runs as an independent single-camera
+session using configs in civet-monitor/config/single/. Windows are rebuilt
+from data/annotations.csv (pad 120 s, merge gap 300 s) so every label falls
+inside a processed window. Videos are ordered by label count so the most
+labelled footage is covered first if the run is interrupted.
 
-Usage:  python run_windows.py            (run from project root)
-Logs:   winlogs/win_00_ds1.log ...      and winlogs/orchestrator.log
+Usage:  python run_windows.py [first_index]
+Logs:   winlogs/win_NN_<video>.log  and winlogs/orchestrator.log
 """
 from __future__ import annotations
 
@@ -23,15 +25,15 @@ CM = ROOT / "civet-monitor"
 LOGS = ROOT / "winlogs"
 
 
-def build_windows():
+def build_jobs():
     per = collections.defaultdict(list)
     with open(ROOT / "data/annotations.csv", encoding="utf-8-sig") as fh:
         for r in csv.DictReader(fh):
-            d = int(r["source_video"].split("_Dataset")[1].split(".")[0])
-            per[d].append(float(r["timestamp_seconds"]))
-    wins = []
-    for d in sorted(per):
-        iv = sorted((t - PAD, t + PAD) for t in per[d])
+            per[r["source_video"]].append(float(r["timestamp_seconds"]))
+    jobs = []
+    for video in sorted(per, key=lambda v: -len(per[v])):
+        stem = video.replace(".mp4", "")
+        iv = sorted((t - PAD, t + PAD) for t in per[video])
         merged = [list(iv[0])]
         for s, e in iv[1:]:
             if s - merged[-1][1] <= GAP:
@@ -39,34 +41,33 @@ def build_windows():
             else:
                 merged.append([s, e])
         for s, e in merged:
-            wins.append((d, max(0.0, s), e - max(0.0, s)))
-    return wins
+            jobs.append((video, stem, max(0.0, s), e - max(0.0, s), len(per[video])))
+    return jobs
 
 
 def main():
     LOGS.mkdir(exist_ok=True)
-    wins = build_windows()
-    # Resume: skip windows whose log already ends with a completed report.
+    jobs = build_jobs()
     first = int(sys.argv[1]) if len(sys.argv) > 1 else 0
     if first == 0:
-        for i in range(len(wins)):
-            lg = LOGS / f"win_{i:02d}_ds{wins[i][0]}.log"
+        for i in range(len(jobs)):
+            lg = LOGS / f"win_{i:02d}_{jobs[i][1]}.log"
             if lg.exists() and "processed" in lg.read_text(errors="replace"):
                 first = i + 1
-    wins = wins[first:]
-    total = sum(w[2] for w in wins)
-    print(f"{len(wins)} windows remaining ({first} done), {total / 3600:.1f} h sim", flush=True)
+    jobs = jobs[first:]
+    total = sum(j[3] for j in jobs)
+    print(f"{len(jobs)} windows remaining ({first} done), {total / 3600:.1f} h sim", flush=True)
     t_all = time.time()
-    for j, (d, start, dur) in enumerate(wins):
+    for j, (video, stem, start, dur, nlab) in enumerate(jobs):
         i = first + j
-        log = LOGS / f"win_{i:02d}_ds{d}.log"
+        log = LOGS / f"win_{i:02d}_{stem}.log"
         cmd = [sys.executable, "-m", "civetwatch.run", "--offline",
-               "--config", f"config/our_dataset{d}.yaml",
+               "--config", f"config/single/{stem}.yaml",
                "--start", f"{start:.1f}", "--duration", f"{dur:.1f}"]
         t0 = time.time()
         with open(log, "w", encoding="utf-8", errors="replace") as lo:
             r = subprocess.run(cmd, cwd=CM, stdout=lo, stderr=subprocess.STDOUT)
-        print(f"[{i:02d}/23] ds{d} start={start:.0f}s dur={dur:.0f}s "
+        print(f"[{i:02d}/{first + len(jobs)}] {video} start={start:.0f}s dur={dur:.0f}s "
               f"rc={r.returncode} wall={time.time() - t0:.0f}s", flush=True)
         if r.returncode != 0:
             print(f"  FAILED, see {log}", flush=True)
