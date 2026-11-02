@@ -351,7 +351,7 @@ data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006850000ms.jpg,CAM3_Dataset2.
 data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006865000ms.jpg,CAM3_Dataset2.mp4,CAM3,6865.0,,0.0,True,0,534,No Civet
 data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006880000ms.jpg,CAM3_Dataset2.mp4,CAM3,6880.0,bird,0.212,True,4,240,Eating
 data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006895000ms.jpg,CAM3_Dataset2.mp4,CAM3,6895.0,,0.0,True,0,535,No Civet
-data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006910000ms.jpg,CAM3_Dataset2.mp4,CAM3,6910.0,bird,0.21,True,4,241,Walking
+data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006910000ms.jpg,CAM3_Dataset2.mp4,CAM3,6910.0,bird,0.21,True,4,241,Eating
 data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006950000ms.jpg,CAM3_Dataset2.mp4,CAM3,6950.0,,0.0,True,0,536,No Civet
 data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006965000ms.jpg,CAM3_Dataset2.mp4,CAM3,6965.0,,0.0,True,0,537,Eating
 data/scan_candidates/CAM3_Dataset2/CAM3_Dataset2_0006980000ms.jpg,CAM3_Dataset2.mp4,CAM3,6980.0,bird,0.212,True,5,242,Eating

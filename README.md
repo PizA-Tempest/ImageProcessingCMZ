@@ -167,6 +167,14 @@ cost ~2 points of macro F1 while it was included). Grooming (7) and Other (7–8
 - **Full predictions**: `results/predictions.csv` (39,932 frames)
 - **Dashboards**: `streamlit run dashboard.py` (monitoring) · `streamlit run annotate_app.py` (labeling)
 
+**Teammate's part (pose tracking + temporal behaviour, under `civet-monitor/`):**
+- **Pose model**: `civet-monitor/models/civet_yolo26n.pt`
+- **Behaviour model**: `civet-monitor/models/behaviour_v3.pt` (5-ensemble 1D CNN, 11 classes)
+- **Labels**: `civet-monitor/labelling/behaviour_*.csv` (behaviour lists) ·
+  `civet-monitor/labelling/crossings_*.csv` (room crossings) ·
+  pose frames in `civet-monitor/labelling/labels/`
+- **Keeper report 17:00–24:00**: `civet-monitor/outputs/report_v3/` (tables, charts, events)
+
 ## Deadline-ready checklist
 
 - [x] All 12 videos scanned; 425 + 286 frames labeled (agent-assisted, human-audited sample)
