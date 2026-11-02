@@ -1,0 +1,17 @@
+part,behaviour,ROOM01,ROOM02,ROOM03,ROOM04,total_min
+night,walking,4.9,8.6,19.1,22.2,54.8
+night,standing,0.6,8.7,9.1,17.6,36.0
+night,resting,0.0,0.0,0.1,2.8,2.9
+night,eating,0.0,0.3,12.2,0.0,12.5
+night,drinking,0.0,0.0,0.0,12.0,12.0
+night,grooming,0.0,0.3,0.4,3.3,4.0
+night,marking,0.0,0.0,0.0,0.3,0.3
+night,urination,0.0,1.1,0.0,0.0,1.1
+night,unknown,0.3,235.9,0.0,0.2,236.4
+day,walking,0.0,0.5,1.2,1.4,3.1
+day,standing,0.0,0.8,2.4,16.2,19.4
+day,resting,0.0,0.0,0.0,1.4,1.4
+day,eating,0.0,0.3,3.9,0.0,4.2
+day,drinking,0.0,0.0,0.0,13.8,13.8
+day,grooming,0.0,0.0,0.0,1.9,1.9
+day,unknown,0.0,15.9,0.0,0.5,16.4

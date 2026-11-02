@@ -1,0 +1,8 @@
+hour,active_min,inactive_min,not_seen_min,main_room,main_behaviour
+17:00,42.2,1.4,16.4,ROOM04,standing
+18:00,8.4,0.0,51.6,ROOM02,eating
+19:00,4.3,0.0,55.7,ROOM02,eating
+20:00,5.5,0.0,54.5,ROOM02,eating
+21:00,39.6,2.5,17.9,ROOM02,standing
+22:00,4.0,0.0,56.0,ROOM02,walking
+23:00,59.0,0.4,0.7,ROOM04,walking
