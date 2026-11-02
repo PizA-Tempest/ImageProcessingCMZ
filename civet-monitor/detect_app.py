@@ -6,6 +6,7 @@ Run from this folder:  streamlit run detect_app.py --server.port 8503
 
 import io
 import math
+import re
 from pathlib import Path
 
 import pandas as pd
@@ -30,11 +31,52 @@ STATUS_STYLE = {
     "unlabelled": ("orange", "not hand-labelled"),
 }
 
+BEH_BADGE = {
+    "walking": "orange", "standing": "green", "resting": "blue", "eating": "orange",
+    "drinking": "blue", "grooming": "violet", "running": "red", "marking": "violet",
+    "urination": "violet", "defecation": "gray", "unknown": "gray", "hidden": "gray",
+}
+
 st.set_page_config(page_title="Civet Detector — Frames", page_icon=":material/pets:", layout="wide")
 
 
 @st.cache_data
+def load_behaviour_index() -> list:
+    """labelling/behaviour_*.csv bout lists -> [(start_sec, end_sec, [(sec, behaviour), ...])]."""
+    pieces = []
+    for f in sorted((ROOT / "labelling").glob("behaviour_*.csv")):
+        m = re.search(r"_(\d{2})(\d{2})_(\d{2})(\d{2})\.csv$", f.name)
+        if not m:
+            continue
+        start = int(m[1]) * 3600 + int(m[2]) * 60
+        end = int(m[3]) * 3600 + int(m[4]) * 60
+        bouts = []
+        for r in pd.read_csv(f).itertuples(index=False):
+            b = str(r.behaviour)
+            if b in ("START", "END"):
+                continue
+            hh, mm, ss = map(int, str(r.time).split(":"))
+            bouts.append((hh * 3600 + mm * 60 + ss, b))
+        pieces.append((start, end, bouts))
+    return pieces
+
+
+def behaviour_at(pieces: list, sec: float) -> str:
+    for start, end, bouts in pieces:
+        if start <= sec <= end:
+            cur = ""
+            for t, b in bouts:
+                if t <= sec:
+                    cur = b
+                else:
+                    break
+            return cur
+    return ""
+
+
+@st.cache_data
 def load_frames() -> pd.DataFrame:
+    pieces = load_behaviour_index()
     df = pd.read_csv(MANIFEST)
     rows = []
     for r in df.itertuples(index=False):
@@ -58,7 +100,11 @@ def load_frames() -> pd.DataFrame:
                 status=status, n_kp=n_kp, has_box=has_box,
             )
         )
-    return pd.DataFrame(rows)
+    out = pd.DataFrame(rows)
+    ts = pd.to_datetime(out["time"])
+    sec = ts.dt.hour * 3600 + ts.dt.minute * 60 + ts.dt.second + ts.dt.microsecond / 1e6
+    out["behaviour"] = [behaviour_at(pieces, s) for s in sec]
+    return out
 
 
 @st.cache_data
@@ -119,8 +165,9 @@ div[data-testid="stImage"] img {
 
 st.title("Civet detector — frame viewer")
 st.caption(
-    "1,709 frames from 5 Apr 2026 · hand labels for train + val "
-    "(box + nose, eyes, neck, mid-back, tail base, tail tip) · test / gate frames not labelled yet"
+    "1,709 frames from 5 Apr 2026 · hand pose labels for train + val "
+    "(box + nose, eyes, neck, mid-back, tail base, tail tip) · behaviour matched from the "
+    "behaviour bout lists by clock time · test / gate frames not labelled yet"
 )
 
 c1, c2, c3, c4 = st.columns(4)
@@ -131,6 +178,12 @@ status_f = c4.segmented_control(
     "Label", ["All", "civet", "empty", "unlabelled"], default="All", key="f_status", width="stretch"
 ) or "All"
 
+behaviours = sorted(b for b in frames["behaviour"].unique() if b)
+beh_f = st.selectbox(
+    "Behaviour at this frame's clock time (matched from labelling/behaviour_*.csv bout lists)",
+    ["All"] + behaviours, key="f_beh",
+)
+
 sub = frames
 if split_f != "All":
     sub = sub[sub.split == split_f]
@@ -140,12 +193,15 @@ if night_f != "All":
     sub = sub[sub.night == (1 if night_f == "night" else 0)]
 if status_f != "All":
     sub = sub[sub.status == status_f]
+if beh_f != "All":
+    sub = sub[sub.behaviour == beh_f]
 sub = sub.sort_values("time").reset_index(drop=True)
 
-k1, k2, k3 = st.columns(3)
+k1, k2, k3, k4 = st.columns(4)
 k1.metric("Frames", len(sub))
 k2.metric("With civet", int((sub.status == "civet").sum()))
 k3.metric("Empty", int((sub.status == "empty").sum()))
+k4.metric("Behaviour matched", int((sub.behaviour != "").sum()))
 
 legend = "  ·  ".join(
     f"<span style='color:{KP_COLORS[i]}\u25cf'>{n}</span>" for i, n in enumerate(KP_NAMES)
@@ -175,8 +231,18 @@ with tab_step:
             st.caption(
                 f"Frame {pos + 1} / {len(sub)} · {row.file} · {row.cam} · {row.time} · "
                 f"{row.split} · {'night' if row.night else 'day'}"
+                + (f" · **behaviour: {row.behaviour}**" if row.behaviour else "")
             )
         with side:
+            with st.container(border=True):
+                st.caption("Behaviour at this time")
+                if row.behaviour:
+                    st.badge(row.behaviour, color=BEH_BADGE.get(row.behaviour, "gray"),
+                             icon=":material/pets:")
+                    st.caption("From the behaviour bout list covering this frame's clock time")
+                else:
+                    st.badge("not covered", color="gray", icon=":material/help:")
+                    st.caption("Frame time is outside the labelled behaviour pieces")
             with st.container(border=True):
                 st.caption("Label status")
                 color, label = STATUS_STYLE[row.status]
@@ -211,6 +277,7 @@ def enlarge(row_idx: int):
     st.caption(
         f"{row.file} · {row.cam} · {row.time} · {row.split} · "
         f"{'night' if row.night else 'day'} · {STATUS_STYLE[row.status][1]}"
+        + (f" · behaviour: {row.behaviour}" if row.behaviour else " · no behaviour label for this time")
         + (f" · {row.n_kp}/6 keypoints" if row.has_box else "")
     )
     if st.button("Close", key="enl_close", width="content"):
@@ -237,7 +304,10 @@ with tab_gallery:
                 with cols[c]:
                     st.image(frame_bytes(fr), width="stretch")
                     cap1, cap2 = st.columns([3, 2])
-                    cap1.caption(f"{fr.cam} · {fr.time[11:19]} · {fr.split}")
+                    cap1.caption(
+                        f"{fr.cam} · {fr.time[11:19]} · {fr.split}"
+                        + (f" · **{fr.behaviour}**" if fr.behaviour else "")
+                    )
                     color, label = STATUS_STYLE[fr.status]
                     cap2.badge(label, color=color)
                     if st.button("Enlarge", key=f"enl_{i}", width="stretch",
