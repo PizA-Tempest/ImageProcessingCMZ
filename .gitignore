@@ -12,7 +12,11 @@ st_log.txt
 # Large regenerable media (not pushed to GitHub)
 data/videos/*
 data/frames.zip
-civet-monitor/
+civet-monitor/labelling/images/
+civet-monitor/outputs/crossings/
+civet-monitor/outputs/remux/
+civet-monitor/outputs/gate_visits/
+civet-monitor/outputs/rerun/
 
 # Experiment leftovers
 models/r*.pt
