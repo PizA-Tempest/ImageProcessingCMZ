@@ -1,0 +1,53 @@
+[
+  {
+    "name": "civet_box",
+    "color": "#fa3253",
+    "type": "rectangle",
+    "attributes": []
+  },
+  {
+    "name": "civet",
+    "color": "#2080c0",
+    "type": "skeleton",
+    "attributes": [],
+    "sublabels": [
+      {
+        "name": "nose",
+        "color": "#e6194b",
+        "attributes": [],
+        "type": "points"
+      },
+      {
+        "name": "eyes",
+        "color": "#f58231",
+        "attributes": [],
+        "type": "points"
+      },
+      {
+        "name": "neck",
+        "color": "#ffe119",
+        "attributes": [],
+        "type": "points"
+      },
+      {
+        "name": "mid_back",
+        "color": "#3cb44b",
+        "attributes": [],
+        "type": "points"
+      },
+      {
+        "name": "tail_base",
+        "color": "#4363d8",
+        "attributes": [],
+        "type": "points"
+      },
+      {
+        "name": "tail_tip",
+        "color": "#911eb4",
+        "attributes": [],
+        "type": "points"
+      }
+    ],
+    "svg": "<line x1=\"8\" y1=\"52\" x2=\"20\" y2=\"46\" stroke=\"black\" data-type=\"edge\" data-node-from=\"1\" stroke-width=\"0.5\" data-node-to=\"2\"></line><line x1=\"20\" y1=\"46\" x2=\"34\" y2=\"42\" stroke=\"black\" data-type=\"edge\" data-node-from=\"2\" stroke-width=\"0.5\" data-node-to=\"3\"></line><line x1=\"34\" y1=\"42\" x2=\"55\" y2=\"40\" stroke=\"black\" data-type=\"edge\" data-node-from=\"3\" stroke-width=\"0.5\" data-node-to=\"4\"></line><line x1=\"55\" y1=\"40\" x2=\"76\" y2=\"44\" stroke=\"black\" data-type=\"edge\" data-node-from=\"4\" stroke-width=\"0.5\" data-node-to=\"5\"></line><line x1=\"76\" y1=\"44\" x2=\"95\" y2=\"62\" stroke=\"black\" data-type=\"edge\" data-node-from=\"5\" stroke-width=\"0.5\" data-node-to=\"6\"></line><circle r=\"1.5\" stroke=\"black\" fill=\"#b3b3b3\" cx=\"8\" cy=\"52\" stroke-width=\"0.1\" data-type=\"element node\" data-element-id=\"1\" data-node-id=\"1\" data-label-name=\"nose\"></circle><circle r=\"1.5\" stroke=\"black\" fill=\"#b3b3b3\" cx=\"20\" cy=\"46\" stroke-width=\"0.1\" data-type=\"element node\" data-element-id=\"2\" data-node-id=\"2\" data-label-name=\"eyes\"></circle><circle r=\"1.5\" stroke=\"black\" fill=\"#b3b3b3\" cx=\"34\" cy=\"42\" stroke-width=\"0.1\" data-type=\"element node\" data-element-id=\"3\" data-node-id=\"3\" data-label-name=\"neck\"></circle><circle r=\"1.5\" stroke=\"black\" fill=\"#b3b3b3\" cx=\"55\" cy=\"40\" stroke-width=\"0.1\" data-type=\"element node\" data-element-id=\"4\" data-node-id=\"4\" data-label-name=\"mid_back\"></circle><circle r=\"1.5\" stroke=\"black\" fill=\"#b3b3b3\" cx=\"76\" cy=\"44\" stroke-width=\"0.1\" data-type=\"element node\" data-element-id=\"5\" data-node-id=\"5\" data-label-name=\"tail_base\"></circle><circle r=\"1.5\" stroke=\"black\" fill=\"#b3b3b3\" cx=\"95\" cy=\"62\" stroke-width=\"0.1\" data-type=\"element node\" data-element-id=\"6\" data-node-id=\"6\" data-label-name=\"tail_tip\"></circle>"
+  }
+]
