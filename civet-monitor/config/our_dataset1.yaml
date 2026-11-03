@@ -1,0 +1,109 @@
+# Adapted from system.yaml: friend's pipeline pointed at OUR Dataset1 videos.
+# Run from civet-monitor/: python -m civetwatch.run --offline --config config/our_dataset1.yaml --duration 300
+site:
+  animal_id: A01
+  timezone: Asia/Bangkok
+
+rooms:
+  ROOM01: {name: Room 1}
+  ROOM02: {name: Room 2}
+  ROOM03: {name: Room 3}
+  ROOM04: {name: Room 4}
+adjacency: [[ROOM01, ROOM02], [ROOM02, ROOM03], [ROOM03, ROOM04]]
+
+cameras:
+  CAM01:
+    room: ROOM01
+    source: ../data/videos/CAM1_Dataset1.mp4
+    substream: null
+    file_start: "2026-04-05T00:00:00"
+  CAM02:
+    room: ROOM02
+    source: ../data/videos/CAM2_Dataset1.mp4
+    substream: null
+    file_start: "2026-04-05T00:00:00"
+  CAM03:
+    room: ROOM03
+    source: ../data/videos/CAM3_Dataset1.mp4
+    substream: null
+    file_start: "2026-04-05T00:00:00"
+  CAM04:
+    room: ROOM04
+    source: ../data/videos/CAM4_Dataset1.mp4
+    substream: null
+    file_start: "2026-04-05T00:00:00"
+
+replay:
+  enabled: true
+  speed: 1.0
+  start_offset_s: 0
+
+reader:
+  reconnect_initial_s: 1.0
+  reconnect_max_s: 30.0
+  stream_lost_after_s: 5.0
+
+rates:
+  active_fps: 7.5
+  idle_fps: 5.0
+
+preprocess:
+  gray3: true
+  clahe: {enabled: true, clip_limit: 2.0, tiles: 8}
+  overlay_masks: []
+
+motion:
+  width: 192
+  height: 108
+  diff_threshold: 25
+  min_area_px: 40
+  trigger_frames: 2
+  bg_learning_rate: 0.002
+  frame_diff_threshold: 8
+  hold_s: 2.0
+  max_area_frac: 0.25
+  max_blobs: 3
+
+detector:
+  kind: yolo
+  weights: models/civet_yolo26n.pt
+  imgsz: 640
+  conf: 0.25
+  classes: null
+  device: 0
+  half: true
+
+tracker:
+  track_high_thresh: 0.45
+  track_low_thresh: 0.1
+  new_track_thresh: 0.45
+  match_thresh: 0.8
+  track_buffer_s: 1.0
+
+handoff:
+  t_handoff_s: 10.0
+  lost_after_s: 1.0
+  recover_after_s: 5.0
+  min_track_age: 2
+  min_dwell_s: 2.0
+  door_track_s: 3.0
+  hind_window_s: 0.0
+  hind_min_votes: 3
+  hind_keypoint: 4
+  hind_min_conf: 0.5
+  hind_margin_px: 15
+  hind_near_px: 80
+  door_min_age: 8
+  zone_margin_px: 10
+  door_margin_px: 20
+
+behaviour:
+  weights: models/behaviour_v3.pt
+
+storage:
+  db_path: outputs/our_dataset1.sqlite
+  room_log_csv: outputs/our_room_log_dataset1.csv
+
+debug:
+  save_video: false
+  video_dir: outputs/debug

@@ -1,0 +1,22 @@
+model: models/yolo26n-pose.pt
+data_root: labelling
+manifest: labelling/manifest.csv
+train_splits: [train, train_gate]
+names: {0: civet}
+kpt_names: [nose, eyes, neck, mid_back, tail_base, tail_tip]
+kpt_shape: [6, 3]
+flip_idx: [0, 1, 2, 3, 4, 5]
+
+train:
+  imgsz: 640
+  batch: 16
+  epochs: 100
+  patience: 20
+  hsv_h: 0.0
+  hsv_s: 0.0
+  hsv_v: 0.4
+  fliplr: 0.5
+  device: 0
+  seed: 0
+  project: outputs/train
+  name: civet_pose
