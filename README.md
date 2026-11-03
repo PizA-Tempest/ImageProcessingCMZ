@@ -111,6 +111,18 @@ python predict_video.py --all --every-seconds 5
 streamlit run dashboard.py
 ```
 
+### civet-monitor viewers (run from the `civet-monitor/` folder)
+
+```powershell
+# Frame browser: pose box + 6 keypoints drawn, behaviour matched from the bout lists,
+# filters (split/camera/night/label/behaviour), step-through and gallery
+streamlit run detect_app.py --server.port 8503
+
+# Keeper report dashboard from the stored outputs/report_v3 (time budget, hourly
+# activity, rooms, all 597 behaviour bouts, original charts)
+streamlit run report_app.py --server.port 8502
+```
+
 ## Files
 
 | Path | Purpose |
@@ -128,7 +140,7 @@ streamlit run dashboard.py
 | `annotate_app.py` | labeling UI |
 | `dashboard.py` | results dashboard |
 | `eval_gate.py` | presence-gate A/B evaluation on the labeled frames |
-| `civet-monitor/` | friend's full pipeline (local, git-ignored); only its detector is used |
+| `civet-monitor/` | teammate's full pipeline — now in the repo (code, models, labels, caches); frame images and videos stay local (too large for GitHub) |
 
 ## Dataset label distribution (711 frames)
 
@@ -165,15 +177,24 @@ cost ~2 points of macro F1 while it was included). Grooming (7) and Other (7–8
 - **Trained model**: `models/behavior_classifier.pt` (EfficientNet-B0, 4-fold group CV 69.0%)
 - **CV metrics + confusion matrix**: `results/metrics.json`, `results/confusion_matrix.png`
 - **Full predictions**: `results/predictions.csv` (39,932 frames)
-- **Dashboards**: `streamlit run dashboard.py` (monitoring) · `streamlit run annotate_app.py` (labeling)
+- **Dashboards**: `streamlit run dashboard.py` (monitoring) · `streamlit run annotate_app.py` (labeling) ·
+  from `civet-monitor/`: `streamlit run detect_app.py --server.port 8503` (pose frame viewer) ·
+  `streamlit run report_app.py --server.port 8502` (keeper report)
 
-**Teammate's part (pose tracking + temporal behaviour, under `civet-monitor/`):**
+**Teammate's part (pose tracking + temporal behaviour, under `civet-monitor/`, in the repo):**
 - **Pose model**: `civet-monitor/models/civet_yolo26n.pt`
 - **Behaviour model**: `civet-monitor/models/behaviour_v3.pt` (5-ensemble 1D CNN, 11 classes)
 - **Labels**: `civet-monitor/labelling/behaviour_*.csv` (behaviour lists) ·
   `civet-monitor/labelling/crossings_*.csv` (room crossings) ·
   pose frames in `civet-monitor/labelling/labels/`
 - **Keeper report 17:00–24:00**: `civet-monitor/outputs/report_v3/` (tables, charts, events)
+- **Viewers**: `streamlit run detect_app.py --server.port 8503` (frames with pose boxes,
+  keypoints and matched behaviour) · `streamlit run report_app.py --server.port 8502`
+  (keeper-report dashboard)
+- **In the repo**: pipeline code (`civetwatch/`, `tools/`, `tests/`, `config/`), models,
+  labels, detection/feature caches, training outputs (~110 MB).
+  **Not in the repo** (too large): `labelling/images/` (4.5 GB of frames) and the videos
+  under `outputs/crossings|remux|gate_visits` — the frame viewer needs the images on disk.
 
 ## Deadline-ready checklist
 
