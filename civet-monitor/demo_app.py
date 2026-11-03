@@ -183,15 +183,16 @@ with st.sidebar:
     st.caption("Skeleton joins neighbouring keypoints along the midline when both are above the "
                "keypoint threshold. The model sees grey + CLAHE; the drawing is on the original frame.")
 
-try:
-    model = load_model(st.session_state.weights)
-except Exception as e:  # noqa: BLE001
-    st.error(f"Could not load the model: {e}")
-    st.stop()
-
 st.title("Civet detector — live demo")
 st.caption("YOLO26n-pose fine-tuned on 1,023 hand-labelled frames from 5 Apr 2026 · one class (civet) · "
            "box + nose, eyes, neck, mid-back, tail base, tail tip · every box and dot here is the model's prediction")
+
+try:
+    with st.spinner("Loading pose model…"):
+        model = load_model(st.session_state.weights)
+except Exception as e:  # noqa: BLE001
+    st.error(f"Could not load the model: {e}")
+    st.stop()
 
 s = settings()
 tab_frames, tab_upload, tab_video = st.tabs([":material/photo_library: Frames in this repo",
@@ -223,7 +224,8 @@ with tab_frames:
             key = f"pos::{src}::{cam}::{tag}"
             pos = min(int(st.session_state.get(key, 0)), len(sub) - 1)
             row = sub.iloc[pos]
-            raw, ms = run_on_file(row.path, st.session_state.weights, s["conf"], s["imgsz"], s["grey"])
+            with st.spinner("Running detection…"):
+                raw, ms = run_on_file(row.path, st.session_state.weights, s["conf"], s["imgsz"], s["grey"])
             img = cv2.imread(row.path)
             main, side = st.columns([3, 1], gap="large")
             with main:
