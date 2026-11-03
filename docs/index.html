@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Civet Behavior Monitoring — CMZ Phase 2</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#131c2e; --border:#233048; --text:#e2e8f0; --muted:#94a3b8;
+    --green:#34d939; --accent:#059669; --cyan:#22d3ee; --amber:#fbbf24;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  a{color:#6ee7b7}
+  header{padding:56px 0 8px}
+  h1{font-size:34px;margin:0 0 6px;letter-spacing:-.5px}
+  .sub{color:var(--muted);font-size:16px;margin:0 0 14px}
+  .links a{margin-right:16px;font-weight:600}
+  h2{font-size:21px;margin:44px 0 14px;border-left:3px solid var(--accent);padding-left:10px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:26px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+  .card .v{font-size:26px;font-weight:700;color:#6ee7b7}
+  .card .k{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--panel);
+    border:1px solid var(--border);border-radius:10px;padding:14px}
+  .step{background:#0a101c;border:1px solid var(--border);border-radius:8px;padding:8px 11px;font-size:13.5px}
+  .step b{color:var(--cyan);font-weight:600}
+  .arrow{color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+  figure{margin:0;background:var(--panel);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  figure img{width:100%;display:block}
+  figcaption{padding:8px 12px;font-size:13px;color:var(--muted)}
+  figcaption b{color:var(--text);font-weight:600}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.split{grid-template-columns:1fr}}
+  table{border-collapse:collapse;width:100%;background:var(--panel);
+    border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:14px}
+  th,td{padding:8px 12px;border-bottom:1px solid var(--border);text-align:left}
+  th{background:#0a101c;color:var(--cyan);font-size:12.5px;text-transform:uppercase;letter-spacing:.4px}
+  tr:last-child td{border-bottom:none}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .note{color:var(--muted);font-size:13.5px}
+  ul{color:var(--muted);padding-left:20px}li{margin:4px 0}
+  footer{margin:48px 0 32px;padding-top:16px;border-top:1px solid var(--border);
+    color:var(--muted);font-size:13.5px}
+  .banner{display:inline-block;background:#0a101c;border:1px solid var(--border);color:var(--amber);
+    border-radius:6px;padding:2px 9px;font-size:12.5px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="banner">CMZ Phase 2 · static viewer</div>
+  <h1>Civet Behavior Monitoring</h1>
+  <p class="sub">Multi-camera pipeline for the large-spotted civet (ชะมดแผงสันหางดำ) — room A01,
+  four corner cameras, 24 hours of 5 April 2026. Detection → tracking → behaviour → keeper report.</p>
+  <p class="links">
+    <a href="https://github.com/PizA-Tempest/ImageProcessingCMZ">GitHub repository</a>
+    <a href="https://github.com/PizA-Tempest/ImageProcessingCMZ#results-held-out-test-block-17002400">Full results in README</a>
+  </p>
+  <div class="cards">
+    <div class="card"><div class="v">0.981</div><div class="k">Detection mAP50 (val)<br>night 0.975 · day 0.985</div></div>
+    <div class="card"><div class="v">0.876</div><div class="k">Pose PCK@0.1 head<br>tail 0.786 (val)</div></div>
+    <div class="card"><div class="v">0.67</div><div class="k">Behaviour macro F1<br>validation, 7 classes</div></div>
+    <div class="card"><div class="v">1,215</div><div class="k">Hand-labelled pose frames<br>+ 245 min behaviour bouts</div></div>
+    <div class="card"><div class="v">597</div><div class="k">Behaviour bouts in the<br>evening keeper report</div></div>
+  </div>
+</header>
+
+<h2>Pipeline</h2>
+<div class="flow">
+  <span class="step"><b>4 cameras</b> 1080p, 24 h</span><span class="arrow">→</span>
+  <span class="step"><b>Preprocess</b> grey + CLAHE</span><span class="arrow">→</span>
+  <span class="step"><b>YOLO26n-pose</b> box + 6 keypoints</span><span class="arrow">→</span>
+  <span class="step"><b>ByteTrack</b></span><span class="arrow">→</span>
+  <span class="step"><b>Zones + handoff</b> which room</span><span class="arrow">→</span>
+  <span class="step"><b>1D-CNN behaviour</b> 44 features, 5.3 s window</span><span class="arrow">→</span>
+  <span class="step"><b>SQLite → keeper charts</b></span>
+</div>
+<p class="note">Only the camera that has the civet runs the detector (2.6–2.8× real time on an RTX 2060 Super);
+idle cameras use a motion check. Every stage is causal, so offline replays equal live behaviour.</p>
+
+<h2>Sample detections</h2>
+<p class="note">Frames from the hand-labelled set with the pose model's predictions drawn live on this page's
+generator — box + nose, eyes, neck, mid-back, tail base, tail tip. Caption shows camera, clock time and the
+hand label where the frame falls inside a labelled behaviour piece.</p>
+<div class="grid">
+  <figure><img src="samples/sample_01.jpg" alt="CAM01 detection" loading="lazy">
+    <figcaption><b>CAM01 · 01:09:44</b> · walking</figcaption></figure>
+  <figure><img src="samples/sample_02.jpg" alt="CAM02 detection" loading="lazy">
+    <figcaption><b>CAM02 · 02:42:29</b></figcaption></figure>
+  <figure><img src="samples/sample_03.jpg" alt="CAM03 detection" loading="lazy">
+    <figcaption><b>CAM03 · 03:06:11</b> · walking</figcaption></figure>
+  <figure><img src="samples/sample_04.jpg" alt="CAM04 detection" loading="lazy">
+    <figcaption><b>CAM04 · 01:16:47</b> · walking</figcaption></figure>
+  <figure><img src="samples/sample_05.jpg" alt="CAM01 detection" loading="lazy">
+    <figcaption><b>CAM01 · 03:46:58</b> · walking</figcaption></figure>
+  <figure><img src="samples/sample_06.jpg" alt="CAM02 detection" loading="lazy">
+    <figcaption><b>CAM02 · 21:39:24</b></figcaption></figure>
+  <figure><img src="samples/sample_07.jpg" alt="CAM03 detection" loading="lazy">
+    <figcaption><b>CAM03 · 23:24:47</b> · walking</figcaption></figure>
+  <figure><img src="samples/sample_08.jpg" alt="CAM04 detection" loading="lazy">
+    <figcaption><b>CAM04 · 04:17:51</b> · walking</figcaption></figure>
+</div>
+
+<h2>Keeper report — 17:00 to 24:00, 5 April 2026</h2>
+<p class="note">Built from the SQLite behaviour log of the held-out test block: 597 bouts covering all
+420 minutes; Room 2 takes 65% of the evening.</p>
+<figure style="margin-bottom:14px"><img src="report/timeline.png" alt="Behaviour timeline" loading="lazy">
+  <figcaption>Hour-by-hour behaviour timeline over the evening</figcaption></figure>
+<div class="split">
+  <figure><img src="report/time_budget.png" alt="Time budget per behaviour" loading="lazy">
+    <figcaption>Time budget per behaviour (night + day)</figcaption></figure>
+  <div>
+    <table>
+      <tr><th>Hour</th><th class="num">Active</th><th class="num">Inactive</th><th class="num">Not seen</th><th>Main room</th><th>Main behaviour</th></tr>
+      <tr><td>17:00</td><td class="num">42.2</td><td class="num">1.4</td><td class="num">16.4</td><td>ROOM04</td><td>standing</td></tr>
+      <tr><td>18:00</td><td class="num">8.4</td><td class="num">0.0</td><td class="num">51.6</td><td>ROOM02</td><td>eating</td></tr>
+      <tr><td>19:00</td><td class="num">4.3</td><td class="num">0.0</td><td class="num">55.7</td><td>ROOM02</td><td>eating</td></tr>
+      <tr><td>20:00</td><td class="num">5.5</td><td class="num">0.0</td><td class="num">54.5</td><td>ROOM02</td><td>eating</td></tr>
+      <tr><td>21:00</td><td class="num">39.6</td><td class="num">2.5</td><td class="num">17.9</td><td>ROOM02</td><td>standing</td></tr>
+      <tr><td>22:00</td><td class="num">4.0</td><td class="num">0.0</td><td class="num">56.0</td><td>ROOM02</td><td>walking</td></tr>
+      <tr><td>23:00</td><td class="num">59.0</td><td class="num">0.4</td><td class="num">0.7</td><td>ROOM04</td><td>walking</td></tr>
+    </table>
+    <p class="note" style="margin-top:8px">Minutes per hour. Room share: ROOM02 64.9% · ROOM04 22.2% ·
+    ROOM03 11.5% · ROOM01 1.4%. Scored crossings: 10 errors in 22 hand-counted crossings, all at the open D23 gate.</p>
+  </div>
+</div>
+
+<h2>Held-out results (test block 17:00–24:00, never used for training)</h2>
+<table>
+  <tr><th>Metric</th><th>Value</th></tr>
+  <tr><td>Detection, box mAP50 (validation)</td><td>0.981 — night 0.975, day 0.985</td></tr>
+  <tr><td>Pose PCK@0.1 head / tail (validation)</td><td>0.876 / 0.786</td></tr>
+  <tr><td>Time in the right room</td><td>94.8%</td></tr>
+  <tr><td>Behaviour accuracy (test 23:00–23:30)</td><td>80% of 0.53 s steps</td></tr>
+  <tr><td>Behaviour macro F1 (8 classes present)</td><td>0.48 — 0.65 without marking and defecation</td></tr>
+  <tr><td>Walking / standing / grooming F1</td><td>0.90 / 0.74 / 0.77</td></tr>
+  <tr><td>Behaviour validation (4,837 steps)</td><td>accuracy 0.84, macro F1 0.67</td></tr>
+  <tr><td>Bout F1 (same label, ≥ half union overlap)</td><td>0.56</td></tr>
+  <tr><td>Detector speed</td><td>2.6–2.8× real time per camera (RTX 2060 Super, FP16)</td></tr>
+</table>
+
+<h2>Limitations</h2>
+<ul>
+  <li>One day of footage — train and test both come from 5 April 2026; scores may not hold on other days.</li>
+  <li>Rare behaviours are thin: marking, urination, defecation and running have one or two training bouts each.</li>
+  <li>Short night rests read mostly as grooming (test F1 0.09); long daylight rests are recognised (validation 0.88).</li>
+  <li>All room-tracking test errors happen at the open D23 gate — a box alone cannot tell a civet standing in the gate from one passing through.</li>
+  <li>One behaviour test piece (30 min at night), one labeller, no agreement score.</li>
+</ul>
+
+<footer>
+  Static viewer generated from the repository —
+  <a href="https://github.com/PizA-Tempest/ImageProcessingCMZ">github.com/PizA-Tempest/ImageProcessingCMZ</a>.
+  Interactive Streamlit apps (detector demo, frame browser, report) are documented in the README.
+  CMZ Phase 2 · PizA-Tempest · 2026
+</footer>
+
+</div>
+</body>
+</html>
