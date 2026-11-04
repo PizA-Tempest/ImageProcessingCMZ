@@ -13,6 +13,8 @@ Repository: `github.com/PizA-Tempest/ImageProcessingCMZ`
 |---|---|---|
 | GitHub repo | [github.com/PizA-Tempest/ImageProcessingCMZ](https://github.com/PizA-Tempest/ImageProcessingCMZ) | All code: `civet-monitor/` (pipeline, tools, apps), `labelling/`, `models/`, `outputs/`, `docs/`. |
 | Live website | [piza-tempest.github.io/ImageProcessingCMZ](https://piza-tempest.github.io/ImageProcessingCMZ/) | Static viewer (GitHub Pages): key metrics, pipeline diagram, 8 sample detections, keeper report, held-out results. Opens instantly. |
+| Live app · demo video | [cmz-demo-video.streamlit.app](https://cmz-demo-video.streamlit.app/) | Interactive demo video renderer: pick a recording or upload, build a clip or reel, watch the MP4, download it. |
+| Live app · report | [cmz-phase2-report.streamlit.app](https://cmz-phase2-report.streamlit.app/) | Interactive keeper report: hourly activity, time budget, room use, bout timeline (17:00–24:00 run). |
 | README | [README.md](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/README.md) | Full documentation: quick start, results table, pipeline commands, label formats, limitations. |
 | Presentation | `CMZ_Phase2_Presentation.pptx` | Phase 2 slides (deck + assets kept out of the repo, submitted separately). |
 | Footage originals | [Releases · footage-originals](https://github.com/PizA-Tempest/ImageProcessingCMZ/releases) | The 11 recordings/mosaics that exceed git's 100 MB limit (152 MB–1.6 GB). Same bytes are in the repo as lossless `*.part*.mp4` splits. |
@@ -80,7 +82,7 @@ Repository: `github.com/PizA-Tempest/ImageProcessingCMZ`
 |---|---|---|
 | Report builder | [tools/behaviour_report.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/tools/behaviour_report.py) | From the SQLite replay: hourly activity, time budget, room use, timeline. |
 | Report output | [outputs/report_v3/](https://github.com/PizA-Tempest/ImageProcessingCMZ/tree/main/civet-monitor/outputs/report_v3) | Evening 17:00–24:00: 597 bouts / 420 min, Room 2 = 65%; CSVs + timeline and time-budget charts. |
-| Report viewer | [report_app.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/report_app.py) | Streamlit app: report tables and charts (run locally or deploy — see Step 6). |
+| Report viewer | [report_app.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/report_app.py) | Streamlit app: report tables and charts — **live: [cmz-phase2-report.streamlit.app](https://cmz-phase2-report.streamlit.app/)** (or run locally / deploy yourself). |
 
 ---
 
@@ -91,7 +93,7 @@ Run any of them: `streamlit run civet-monitor/<file>.py --server.port 850x` — 
 | Item | Where | What it is |
 |---|---|---|
 | Detector demo | [demo_app.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/demo_app.py) | Frames in the repo / your image / video clip tabs — pose model runs live, box + keypoints drawn, behaviour tag matched from the hand labels. |
-| Demo video renderer | [demo_video_app.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/demo_video_app.py) | Web port of the CLI: one clip or a **reel** of several clips → one MP4, progress bar, download. |
+| Demo video renderer | [demo_video_app.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/demo_video_app.py) | Web port of the CLI: one clip or a **reel** of several clips → one MP4, progress bar, download — **live: [cmz-demo-video.streamlit.app](https://cmz-demo-video.streamlit.app/)**. |
 | CLI renderer | [demo_video.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/demo_video.py) | Terminal version: `python demo_video.py VIDEO --start 00:53:56 --duration 20` (reel: `--reel a.mp4@3236@12 …`). |
 | Frame browser | [detect_app.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/detect_app.py) | Browse all 1,709 labelled frames with detector overlay and hand labels. |
 | Shared engine | [pose_draw.py](https://github.com/PizA-Tempest/ImageProcessingCMZ/blob/main/civet-monitor/pose_draw.py) | Loads the model the pipeline way (grey + CLAHE), draws box + skeleton — used by every demo. |
