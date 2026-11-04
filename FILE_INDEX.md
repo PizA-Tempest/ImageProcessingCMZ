@@ -120,3 +120,5 @@ Run any of them: `streamlit run civet-monitor/<file>.py --server.port 850x` — 
 | Evaluation protocol | README · same section | Split by time block, never by frame; nothing trained or tuned on the test block. |
 | Limitations | [README · Limitations](https://github.com/PizA-Tempest/ImageProcessingCMZ#limitations-state-these-in-the-presentation) | One day of footage, rare behaviours, night rests, D23 gate, bout edges — state these in the presentation. |
 | Slides | `CMZ_Phase2_Presentation.pptx` | Phase 2 presentation deck (submitted separately; not in the repo). |
+
+> **Using the live apps:** both run on Streamlit Community Cloud and sleep after idle — the first open takes ~30–60 s to wake (a bit longer right after an update or rebuild); if the page looks stuck, refresh once. They start from the stored results in this repo, so no footage download is needed to browse them; only the demo renderer actually runs the model (CPU, allow ~1 min per rendered clip).
